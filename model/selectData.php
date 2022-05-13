@@ -1,9 +1,9 @@
 <?php
 
-function ddbConnect()
-{
-    return new PDO("mysql:host=localhost;dbname=COGIP;charset=utf8","user","user");
-}
+    function ddbConnect()
+    {
+        return new PDO("mysql:host=localhost;dbname=COGIP;charset=utf8","user","user");
+    }
 
     function selectCompany()
     {
