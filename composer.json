@@ -1,0 +1,15 @@
+{
+    "name": "loic8/php-challenge-2",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Loïc Calcagno",
+            "email": "calcagnoloic93@gmail.com"
+        }
+    ],
+    "require": {}
+}
