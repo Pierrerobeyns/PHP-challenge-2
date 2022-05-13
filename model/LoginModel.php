@@ -17,7 +17,7 @@ class LoginModel
         $statement = $stmt->prepare($req);
         $data = $statement->execute();
 
-        var_dump($data->fetchAll());
+        var_dump($data->fetchAll());        
         
     }
 }
