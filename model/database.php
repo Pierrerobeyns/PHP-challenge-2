@@ -1,10 +1,10 @@
 <?php
 
-namespace app\controller;
+namespace app\model;
 
 use Exception;
 
-class Connexion
+class Database
 {
     const USERNAME="root";
     const PASSWORD="root";
@@ -21,7 +21,7 @@ class Connexion
     public function connect()
     {
         try {
-            $this->pdo = new \PDO("mysql:host=$this->server;dbname=$this->db;charset=utf8", self::USERNAME, self::PASSWORD);
+            $this->pdo = new \PDO("mysql:host=$this->server;dbname=$this->dbname;charset=utf8", self::USERNAME, self::PASSWORD);
         } catch (Exception $e) {
             echo "Error : " . $e->getMessage();
         }
