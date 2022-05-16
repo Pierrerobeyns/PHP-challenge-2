@@ -2,10 +2,12 @@
 
 namespace app\controller;
 
+use app\controller\Controller;
+
 class LoginController extends Controller
 {
-    function login()
+    public function loginPage()
     {
-        return $this->controller('login');
+        return $this->view('login');
     }
 }

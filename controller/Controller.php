@@ -4,8 +4,18 @@ namespace app\controller;
 
 class Controller
 {
-    function controller($url)
+    public function view(string $view)
     {
-        require "view/" . $url .".php";
+        require "view/" . $view . ".php";
     }
 }
+
+//     require_once 'model/selectData.php';
+
+//    $test = selectCompany();
+
+//    echo '<pre>';
+//    var_dump($test);
+//    echo '</pre>';
+
+//    echo $test[0]['companyName'];
