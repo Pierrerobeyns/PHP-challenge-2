@@ -1,6 +1,8 @@
 <?php
 namespace app\model;
 
+use app\model\Database;
+
 class LoginModel 
 {
     public $db;
@@ -13,11 +15,9 @@ class LoginModel
     function select()
     {
         $req = "SELECT * FROM people";
-        $stmt = $this->db->getInstance();
-        $statement = $stmt->prepare($req);
-        $data = $statement->execute();
-
-        var_dump($data->fetchAll());        
-        
+        $statement = $this->db->getInstance()->prepare($req);
+        $statement->execute();   
+        $data = $statement->fetchAll($this->db->getInstance()::FETCH_ASSOC);
+        return $data;
     }
 }

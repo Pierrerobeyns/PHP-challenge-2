@@ -11,8 +11,7 @@ switch ($url) {
         $root = new LoginController();
         $root->login();
         break;
-
-
+        
     default:
         echo "page 404";
         break;

@@ -1,9 +1,12 @@
 <?php
 use app\model\LoginModel;
 
-$data = new LoginModel();
-$data->select();
+$loginModel = new LoginModel();
+$result = $loginModel->select();
+echo "<pre>";
+var_dump($loginModel->select());
+echo "</pre>";
 
-var_dump($data);
+echo $result[0]['lastname'] . '<br>';
 
-echo "Success";
+var_dump(gettype($loginModel->select()));
