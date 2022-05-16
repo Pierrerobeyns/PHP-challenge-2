@@ -2,7 +2,7 @@
 
 use app\model\Database;
 
-class ContactModel 
+class InvoicesModel 
 {
     public $db;
 
