@@ -43,19 +43,22 @@ body header nav .nav-bar .nav-item {
 }
 
 body header nav .nav-bar .nav-item:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  text-decoration: underline;
   color: #A31621;
 }
 
 body header nav .nav-button {
   margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
 }
 
 body header nav .nav-button a {
   color: #A31621;
   border: #A31621 1px solid;
-  padding: 10px 35px;
+  padding: 10px 40px;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;

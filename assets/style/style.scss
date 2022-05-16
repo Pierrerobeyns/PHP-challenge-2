@@ -36,7 +36,7 @@ body {
                     transition: all 0.2s;
 
                     &:hover {
-                        transform: scale(1.2);
+                        text-decoration: underline;
                         color: $redcolor;
                     }
                 }
@@ -44,11 +44,13 @@ body {
 
             .nav-button {
                 margin-right: 30px;
+                display: flex;
+                gap: 25px;
 
                 a {
                     color: $redcolor;
                     border: $redcolor 1px solid;
-                    padding: 10px 35px;
+                    padding: 10px 40px;
                     border-radius: 5px;
                     transition: all 0.3s;
 
