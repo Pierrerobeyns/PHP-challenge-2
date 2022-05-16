@@ -1,8 +1,68 @@
+//VARIABLES
+$font: 'Quicksand', sans-serif;
+$redcolor: #A31621;
+$blackcolor: #293132;
+$greycolor: #CDCDCD;
+$greycolor2: #EEE5E5;
+
 body {
-    background-image: url('../img/log-background.jpg');
-    header{
-        nav{
+    font-family: $font;
+    margin: 0 auto;
+    background-image: url(../img/log-background.jpg);
+    background-size: cover;
+    backdrop-filter: opacity(40%);
+
+    header {
+        background-color: white;
+        nav {
+            
+            height: 3rem;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                margin: 0 50px;
+            }
+
+            .nav-bar {
+                display: flex;
+                gap: 60px;
+            }
+        }
+    }
+
+    .connect-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        .welcome-msg{
+            font-size: 42px;
+        }
+        .sub-welcome-msg{
+            font-size: 32px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 2rem;
+            input{
+                padding: 18px 18px;
+            }
+            .ipt-text{
+                border: $redcolor 1px solid;
+                border-radius: 5px; 
+            }
+            .ipt-sub{
+                background-color: $redcolor;
+                border-radius: 5px;
+                border: none;
+                color: white;
+            }
         }
     }
 }

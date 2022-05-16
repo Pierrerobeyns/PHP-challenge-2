@@ -1,10 +1,91 @@
 body {
-  background-image: url("../img/log-background.jpg");
+  font-family: "Quicksand", sans-serif;
+  margin: 0 auto;
+  background-image: url(../img/log-background.jpg);
+  background-size: cover;
+  -webkit-backdrop-filter: opacity(40%);
+          backdrop-filter: opacity(40%);
+}
+
+body header {
+  background-color: white;
 }
 
 body header nav {
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav a {
+  text-decoration: none;
+  margin: 0 50px;
+}
+
+body header nav .nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+body .connect-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+}
+
+body .connect-section .welcome-msg {
+  font-size: 42px;
+}
+
+body .connect-section .sub-welcome-msg {
+  font-size: 32px;
+}
+
+body .connect-section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  margin-top: 2rem;
+}
+
+body .connect-section form input {
+  padding: 18px 18px;
+}
+
+body .connect-section form .ipt-text {
+  border: #A31621 1px solid;
+  border-radius: 5px;
+}
+
+body .connect-section form .ipt-sub {
+  background-color: #A31621;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
