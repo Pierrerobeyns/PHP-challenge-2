@@ -1,10 +1,10 @@
 body {
+  background-image: url("../img/log-background.jpg");
+  background-size: cover;
+  -webkit-backdrop-filter: opacity(0.3);
+          backdrop-filter: opacity(0.3);
   font-family: "Quicksand", sans-serif;
   margin: 0 auto;
-  background-image: url(../img/log-background.jpg);
-  background-size: cover;
-  -webkit-backdrop-filter: opacity(40%);
-          backdrop-filter: opacity(40%);
 }
 
 body header {
@@ -12,7 +12,7 @@ body header {
 }
 
 body header nav {
-  height: 3rem;
+  height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,11 +22,11 @@ body header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 30px;
 }
 
 body header nav a {
   text-decoration: none;
-  margin: 0 50px;
 }
 
 body header nav .nav-bar {
@@ -34,6 +34,36 @@ body header nav .nav-bar {
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
+}
+
+body header nav .nav-bar .nav-item {
+  color: #293132;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body header nav .nav-bar .nav-item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #A31621;
+}
+
+body header nav .nav-button {
+  margin-right: 30px;
+}
+
+body header nav .nav-button a {
+  color: #A31621;
+  border: #A31621 1px solid;
+  padding: 10px 35px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body header nav .nav-button a:hover {
+  background-color: #A31621;
+  color: white;
 }
 
 body .connect-section {
@@ -75,17 +105,28 @@ body .connect-section form {
 
 body .connect-section form input {
   padding: 18px 18px;
+  outline: none;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 body .connect-section form .ipt-text {
   border: #A31621 1px solid;
-  border-radius: 5px;
+}
+
+body .connect-section form .ipt-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 29px;
 }
 
 body .connect-section form .ipt-sub {
   background-color: #A31621;
-  border-radius: 5px;
   border: none;
   color: white;
+  width: 288px;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

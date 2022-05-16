@@ -12,8 +12,8 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="nav-item">COGIP</a>
             <div class="nav-bar">
+                <a href="#" class="nav-item">COGIP</a>
                 <a href="#" class="nav-item">Home</a>
                 <a href="#" class="nav-item">Invoices</a>
                 <a href="#" class="nav-item">Companies</a>
