@@ -8,9 +8,28 @@ use app\controller\ErrorController;
 use app\controller\WelcomeController;
 
 switch ($url) {
-    case '/':
+    case '/welcome':
         $welcome = new WelcomeController();
         $welcome->getView();
+        break;
+
+    case '/noadmin/Companies':
+        break;
+
+    case '/noadmin/Contac':
+        echo "page Company List";
+        break;
+
+    case '/noadmin/Invoices':
+        echo "page Invoices List";
+        break;
+
+    case '/admin/NewCompanies':
+        echo "page New company";
+        break;
+        
+    case '/Registration':
+        echo "page registration";
         break;
     
     default:

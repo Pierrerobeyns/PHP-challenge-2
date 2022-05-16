@@ -8,4 +8,6 @@ class WelcomeController extends Controller
     {
         return $this->view('welcome');
     }
+
+    
 }
