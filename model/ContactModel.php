@@ -17,8 +17,7 @@ class ContactModel
             "SELECT lastname, firstame, phone, email, company 
             FROM people 
             INNER JOIN company 
-                on people.id = company.id 
-            LIMIT 5";
+                on people.id = company.id";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
