@@ -4,7 +4,11 @@ require __DIR__."/vendor/autoload.php";
 
 $url = $_SERVER["REQUEST_URI"];
 
+use app\controller\CompaniesController;
+use app\controller\ContactController;
 use app\controller\ErrorController;
+use app\controller\InvoicesController;
+use app\controller\RegistrationController;
 use app\controller\WelcomeController;
 
 switch ($url) {
@@ -14,22 +18,28 @@ switch ($url) {
         break;
 
     case '/noadmin/Companies':
+        $companiesList = new CompaniesController();
+        $companiesList->getCompaniesList();
         break;
 
-    case '/noadmin/Contac':
-        echo "page Company List";
+    case '/noadmin/Contact':
+        $contactList = new ContactController();
+        $contactList->getContactList();
         break;
 
     case '/noadmin/Invoices':
-        echo "page Invoices List";
+        $invoicesList = new InvoicesController();
+        $invoicesList->getInvoicesList();
         break;
 
     case '/admin/NewCompanies':
-        echo "page New company";
+        $newCompanies = new CompaniesController();
+        $newCompanies->getNewCompanies();
         break;
         
     case '/Registration':
-        echo "page registration";
+        $registration = new RegistrationController();
+        $registration->getViewRegistration();
         break;
     
     default:
