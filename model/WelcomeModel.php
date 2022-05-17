@@ -15,7 +15,7 @@ class WelcomeModel
     {
         $query = 
             "SELECT numberinvoice, date , company 
-            FROM invoices
+            FROM invoice
             INNER JOIN company 
             on invoice.id = company.id 
             LIMIT 5";
@@ -28,7 +28,7 @@ class WelcomeModel
     public function readLastContact()
     {
         $query = 
-            "SELECT lastname, firstame, phone, email, company 
+            "SELECT lastname, firstname, phone, email, company 
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 
@@ -42,7 +42,7 @@ class WelcomeModel
     public function readLastCompanies()
     {
         $query = 
-            "SELECT lastname, firstame, vatnumber, country, type 
+            "SELECT lastname, firstname, vatnumber, country, type 
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 

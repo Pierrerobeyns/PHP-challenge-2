@@ -15,7 +15,7 @@ class InvoicesModel
     {
         $query = 
             "SELECT numberinvoice, date , company, type
-            FROM invoices
+            FROM invoice
             INNER JOIN company 
                 on invoice.id = company.id 
             INNER JOIN type

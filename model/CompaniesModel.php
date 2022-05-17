@@ -14,7 +14,7 @@ class CompaniesModel
     public function readAllCompaniesClients()
     {
         $query = 
-            "SELECT lastname, firstame, vatnumber, country 
+            "SELECT company, vatnumber, country 
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 
