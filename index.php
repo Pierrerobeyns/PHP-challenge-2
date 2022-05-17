@@ -25,6 +25,7 @@ switch ($url) {
     case '/noadmin/Contact':
         $contactList = new ContactController();
         $contactList->getContactList();
+        $contactList->getLastContact();
         break;
 
     case '/noadmin/Invoices':

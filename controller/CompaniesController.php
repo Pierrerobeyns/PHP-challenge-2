@@ -2,6 +2,8 @@
 
 namespace app\controller;
 
+use app\controller\Controller;
+
 class CompaniesController extends Controller
 {
     public function getCompaniesList()

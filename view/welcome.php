@@ -1,8 +1,4 @@
-<head>
-    <title>Welcome | COGIP</title>
-</head>
-<body>
-    <h1>Welcome to the COGIP</h1>
+>body>
     <h3>Last invoices :</h3>
 
     <table>
@@ -14,7 +10,6 @@
             </tr>
         </thead>
         <tbody>
-            <?php ?>
         </tbody>
     </table>
 

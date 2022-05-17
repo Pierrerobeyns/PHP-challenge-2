@@ -2,6 +2,8 @@
 
 namespace app\controller;
 
+use app\controller\Controller;
+
 class WelcomeController extends Controller
 {
     public function getView()
