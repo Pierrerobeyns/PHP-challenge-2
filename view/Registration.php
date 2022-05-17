@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav>
             <div class="nav-bar">
