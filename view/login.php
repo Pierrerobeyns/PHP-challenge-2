@@ -34,7 +34,7 @@
         </div>
         <form action="#" method="get">
             <div class="ipt-container">
-                <input class="ipt-text" type="text" name="id" placeholder="id">
+                <input class="ipt-text" type="text" name="username" placeholder="username">
                 <input class="ipt-text" type="text" name="password" placeholder="password">
                 <input class="ipt-sub" type="submit" name="submit" value="Enter into the COGIP">
             </div>
