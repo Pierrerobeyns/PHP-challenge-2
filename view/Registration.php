@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <header>
         <nav>
             <div class="nav-bar">
@@ -32,16 +33,18 @@
         <div class="sub-welcome-msg">
             <p>Bienvenue dans l’espace de connexion de la COGIP</p>
         </div>
-        <form action="#" method="get">
-            <input class="ipt-text" type="text" name="id" placeholder="id">
-            <div class="ipt-name">
-                <input class="ipt-text" type="text" name="password" placeholder="Nom">
-                <input class="ipt-text" type="text" name="password" placeholder="Prénom">
+        <form action="#" method="post">
+            <div class="ipt-container">
+                <div class="ipt-name-container">
+                    <input class="ipt-name" type="text" name="name" placeholder="Nom">
+                    <input class="ipt-name" type="text" name="firstname" placeholder="Prénom">
+                </div>
+                <input class="ipt-text" type="text" name="id" placeholder="id">
+                <input class="ipt-text" type="text" name="mail" placeholder="Mail">
+                <input class="ipt-text" type="text" name="password" placeholder="password">
+                <input class="ipt-text" type="text" name="password" placeholder="Repeat password">
+                <input class="ipt-sub" type="submit" name="submit" value="Enter into the COGIP">
             </div>
-            <input class="ipt-text" type="text" name="password" placeholder="Mail">
-            <input class="ipt-text" type="text" name="password" placeholder="password">
-            <input class="ipt-text" type="text" name="password" placeholder="Repeat password">
-            <input class="ipt-sub" type="submit" name="submit" value="Enter into the COGIP">
         </form>
     </div>
 

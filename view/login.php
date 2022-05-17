@@ -33,9 +33,11 @@
             <p>Bienvenue dans l’espace de connexion de la COGIP</p>
         </div>
         <form action="#" method="get">
-            <input class="ipt-text" type="text" name="id" placeholder="id">
-            <input class="ipt-text" type="text" name="password" placeholder="password">
-            <input class="ipt-sub"  type="submit" name="submit" value="Enter into the COGIP">
+            <div class="ipt-container">
+                <input class="ipt-text" type="text" name="id" placeholder="id">
+                <input class="ipt-text" type="text" name="password" placeholder="password">
+                <input class="ipt-sub" type="submit" name="submit" value="Enter into the COGIP">
+            </div>
         </form>
     </div>
 

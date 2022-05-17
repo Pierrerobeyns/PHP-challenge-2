@@ -1,10 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/***********************************************************************************************************************/
+/* LOGIN & REGISTER PAGES **********************************************************************************************/
+/************************************************************************************************************************/
 body {
-  background-image: url("../img/log-background.jpg");
-  background-size: cover;
-  -webkit-backdrop-filter: opacity(0.3);
-          backdrop-filter: opacity(0.3);
   font-family: "Quicksand", sans-serif;
   margin: 0 auto;
+  position: relative;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))), url("../img/log-background.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/log-background.jpg");
+  background-background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body header {
@@ -94,7 +103,7 @@ body .connect-section .sub-welcome-msg {
   font-size: 32px;
 }
 
-body .connect-section form {
+body .connect-section .ipt-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,34 +111,38 @@ body .connect-section form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   margin-top: 2rem;
+  width: 360px;
 }
 
-body .connect-section form input {
-  padding: 18px 18px;
+body .connect-section .ipt-container input {
+  padding: 18px 15px;
   outline: none;
-  width: 250px;
   font-size: 18px;
   border-radius: 5px;
 }
 
-body .connect-section form .ipt-text {
+body .connect-section .ipt-container .ipt-text,
+body .connect-section .ipt-container .ipt-name {
   border: #A31621 1px solid;
 }
 
-body .connect-section form .ipt-name {
+body .connect-section .ipt-container .ipt-name-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 29px;
+  gap: 10px;
 }
 
-body .connect-section form .ipt-sub {
+body .connect-section .ipt-container .ipt-name {
+  width: 50%;
+}
+
+body .connect-section .ipt-container .ipt-sub {
   background-color: #A31621;
   border: none;
   color: white;
-  width: 288px;
   font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */
