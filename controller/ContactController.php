@@ -15,7 +15,7 @@ class ContactController extends Controller
     public function getAllContact()
     {
         $allContact = new ContactModel();
-        //$test = $allContact->readAllContact();
-        //return $this->view('noadmin/Contact', $test);
+        $Contact = $allContact->readAllContact();
+        return $this->view('noadmin/Contact', $Contact);
     }
 }

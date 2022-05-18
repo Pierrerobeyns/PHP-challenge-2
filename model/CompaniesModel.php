@@ -44,4 +44,13 @@ class CompaniesModel
         $result = $stmt->fetchAll();
         return $result;
     }
+
+    public function createNewCompanies()
+    {
+        $query = ""; #TODO
+        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
 }

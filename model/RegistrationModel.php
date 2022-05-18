@@ -15,7 +15,7 @@ class RegistrationModel
     {
         $query = 
             "INSERT INTO users(name, firstname, username, mail, password)
-            VALUES (?,?,?,?,?)";
+            VALUES (?,?,?,?,?)"; #Revoir la notation
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
     }
