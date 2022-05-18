@@ -1,4 +1,4 @@
->body>
+<body>
     <h3>Last invoices :</h3>
 
     <table>

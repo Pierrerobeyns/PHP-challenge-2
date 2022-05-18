@@ -12,10 +12,10 @@ class ContactController extends Controller
         return $this->view('noadmin/Contact');
     }
 
-    public function getLastContact()
+    public function getAllContact()
     {
-        $lastContact = new ContactModel();
-        $lastContact->readAllContact();
-        echo"coucou";
+        $allContact = new ContactModel();
+        //$test = $allContact->readAllContact();
+        //return $this->view('noadmin/Contact', $test);
     }
 }
