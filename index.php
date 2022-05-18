@@ -12,14 +12,14 @@ use app\controller\HomePageController;
 use app\controller\InvoicesController;
 
 switch ($url) {
+    case '/':
+        $homePage = new HomePageController();
+        $homePage->homePage();
+        break;
+
     case '/login':
         $login = new LoginController();
         $login->loginPage();
-        break;
-
-    case '/homepage':
-        $homePage = new HomePageController();
-        $homePage->homePage();
         break;
 
     case '/noadmin/invoices/' . $urlExplode[3]:

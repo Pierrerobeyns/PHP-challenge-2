@@ -3,12 +3,19 @@
 namespace app\controller;
 
 use app\controller\Controller;
+use app\model\InvoicesModel;
 
 class InvoicesController extends Controller
 {
     public function getInvoiceById($id)
     {
-        return $this->view('noadmin/InvoicesDetails');
+        $invoice = new InvoicesModel();
+        $invoiceDetail = $invoice->getInvoiceDetail($id);
+        if ($invoiceDetail == false) {
+            return $this->view('error');
+        } else {
+            return $this->view('noadmin/InvoicesDetails', $invoiceDetail);
+        }
     }
 
     public function newInvoice()
