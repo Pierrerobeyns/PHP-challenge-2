@@ -7,9 +7,9 @@ $greycolor2: #EEE5E5;
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-/***********************************************************************************************************************/
-/* LOGIN & REGISTER PAGES **********************************************************************************************/
-/************************************************************************************************************************/
+/******************************************************************************************************************/
+/* LOGIN & REGISTER PAGES *****************************************************************************************/
+/******************************************************************************************************************/
 body {
     font-family: $font;
     margin: 0 auto;
@@ -23,58 +23,6 @@ body {
         size: cover;
         repeat: no-repeat;
         attachment: fixed;
-    }
-
-
-    header {
-        background-color: white;
-
-        nav {
-
-            height: 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-left: 30px;
-
-            a {
-                text-decoration: none;
-            }
-
-            .nav-bar {
-                display: flex;
-                gap: 60px;
-
-                .nav-item {
-                    color: $blackcolor;
-                    transition: all 0.2s;
-
-                    &:hover {
-                        text-decoration: underline;
-                        color: $redcolor;
-                    }
-                }
-            }
-
-            .nav-button {
-                margin-right: 30px;
-                display: flex;
-                gap: 25px;
-
-                a {
-                    color: $redcolor;
-                    border: $redcolor 1px solid;
-                    padding: 10px 40px;
-                    border-radius: 5px;
-                    transition: all 0.3s;
-
-                    &:hover {
-                        background-color: $redcolor;
-                        color: white;
-                    }
-                }
-            }
-        }
     }
 
     .connect-section {

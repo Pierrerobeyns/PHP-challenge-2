@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/error.css">
+    <link rel="stylesheet" href="../assets/style/header.css">
     <title>Document</title>
 </head>
 
@@ -26,6 +27,15 @@
         </nav>
     </header>
 
+    <div class="error-container">
+        <img src="../assets/img/tabler_error-404.svg" alt="404">
+        <a href="#">Homepage</a>
+    </div>
+
+    <div class="wave-container">
+        <img src="../assets/img/wave(4) 2.svg" alt="wave">
+        div.
+    </div>
 </body>
 
 </html>

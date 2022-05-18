@@ -1,8 +1,8 @@
 /** VARIABLES ************************************************************************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-/***********************************************************************************************************************/
-/* LOGIN & REGISTER PAGES **********************************************************************************************/
-/************************************************************************************************************************/
+/******************************************************************************************************************/
+/* LOGIN & REGISTER PAGES *****************************************************************************************/
+/******************************************************************************************************************/
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0 auto;
@@ -15,68 +15,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-body header {
-  background-color: white;
-}
-
-body header nav {
-  height: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 30px;
-}
-
-body header nav a {
-  text-decoration: none;
-}
-
-body header nav .nav-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 60px;
-}
-
-body header nav .nav-bar .nav-item {
-  color: #293132;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-body header nav .nav-bar .nav-item:hover {
-  text-decoration: underline;
-  color: #A31621;
-}
-
-body header nav .nav-button {
-  margin-right: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 25px;
-}
-
-body header nav .nav-button a {
-  color: #A31621;
-  border: #A31621 1px solid;
-  padding: 10px 40px;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-body header nav .nav-button a:hover {
-  background-color: #A31621;
-  color: white;
 }
 
 body .connect-section {
@@ -146,4 +84,4 @@ body .connect-section .ipt-container .ipt-sub {
   color: white;
   font-size: 16px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=log.css.map */
