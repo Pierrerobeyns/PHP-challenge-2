@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +30,6 @@
     <div class="error-container">
         <img src="../assets/img/tabler_error-404.svg" alt="404">
         <a href="#">Homepage</a>
-    </div>
-
-    <div class="wave-container">
-        <img src="../assets/img/wave(4) 2.svg" alt="wave">
-        div.
     </div>
 </body>
 
