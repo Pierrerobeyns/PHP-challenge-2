@@ -1,10 +1,10 @@
-$font: 'Quicksand', sans-serif;
 $redcolor: #A31621;
 $blackcolor: #293132;
 $greycolor: #CDCDCD;
 $greycolor2: #EEE5E5;
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+$font: 'Quicksand', sans-serif;
 
 header {
     background-color: white;
@@ -24,6 +24,7 @@ header {
 
         .nav-bar {
             display: flex;
+            align-items: center;
             gap: 60px;
 
             .nav-item {

@@ -11,28 +11,15 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <div class="nav-bar">
-                <a href="#" class="nav-item">COGIP</a>
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">Invoices</a>
-                <a href="#" class="nav-item">Companies</a>
-                <a href="#" class="nav-item">Contact</a>
-            </div>
-            <div class="nav-button">
-                <a href="#" class="sign-in">Sign in</a>
-                <a href="#" class="sign-up">Sign up</a>
-            </div>
-        </nav>
-    </header>
+    <?php
+        require './template/navbar.php';
+    ?>
     <div class="connect-section">
         <div class="welcome-msg">
             <p>Welcome to the COGIP</p>
         </div>
         <div class="sub-welcome-msg">
-            <p>Bienvenue dans l’espace de connexion de la COGIP</p>
+            <p>Welcome in the connexion space of COGIP</p>
         </div>
         <form action="#" method="post">
             <div class="ipt-container">
