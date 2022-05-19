@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/style/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/style/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/style/header.css" />
     <title>New Invoices</title>
 </head>
+
 <body>
 
-    <h1>Create new invoices</h1>
+    <?php
+    require "../../view/template/header.php"
+    ?>
 
-    <form action="./NewInvoices.php">
+    <div class="container">
+        <h1>Create new invoices</h1>
 
-        <!--Invoices Number-->
-        <label for="NewInvoices">Invoice Number</label>
-        <input type="text" id="invoice" name="invoices" placeholder="123-456-789">
+        <form action="./NewInvoices.php" method="post">
 
-        <!--Date-->
-        <label for="NewInvoices">Invoice Date</label>
-        <input type="date" id="date" name="date" placeholder="01-01-2000" 
-            min="2020-01-01" max="2030-12-31">
+            <!--Invoices Number-->
+            <label for="NewInvoices">Invoice Number</label>
+            <input type="text" id="invoice" name="invoices" placeholder="123-456-789">
 
-        <!--Name of the company-->
-        <label for="NewInvoices">Company</label>
-        <input type="text" id="company" name="company" placeholder="Company">
+            <!--Date-->
+            <label for="NewInvoices">Invoice Date</label>
+            <input type="date" id="date" name="date" placeholder="01-01-2000" min="2020-01-01" max="2030-12-31">
 
-        <!--Name of the contact-->
-        <label for="NewInvoices">Contact person regarding the invoice</label>
-        <input type="text" id="contact" name="contact" placeholder="John Smith">
+            <!--Name of the company-->
+            <label for="NewInvoices">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company">
 
-        <input type="submit" value="Submit">
+            <!--Name of the contact-->
+            <label for="NewInvoices">Contact person regarding the invoice</label>
+            <input type="text" id="contact" name="contact" placeholder="John Smith">
 
-    </form>
-    
+            <input type="submit" value="Submit" class="submit">
+
+        </form>
+    </div>
+
 </body>
+
 </html>
 
 
@@ -44,8 +53,8 @@
 
 
 
-<?php
+<!-- <?php
 
-echo 'TEST NEW INVOICES';
+        echo 'TEST NEW INVOICES';
 
-?>
+        ?> -->

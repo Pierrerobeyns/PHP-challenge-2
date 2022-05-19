@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+header {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+header nav {
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+header nav .nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+
+header nav .nav-bar .nav-item {
+  color: #293132;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+header nav .nav-bar .nav-item:hover {
+  text-decoration: underline;
+  color: #A31621;
+}
+
+header nav .nav-button {
+  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+header nav .nav-button a {
+  color: #A31621;
+  border: #A31621 1px solid;
+  padding: 10px 40px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header nav .nav-button a:hover {
+  background-color: #A31621;
+  color: white;
+}
+/*# sourceMappingURL=header.css.map */
