@@ -1,9 +1,48 @@
-//font-family: 'Quicksand', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+//Variables
+$font: 'Quicksand', sans-serif;
+$redcolor: #A31621;
+$blackcolor: #293132;
+$greycolor: #CDCDCD;
+$greycolor2: #EEE5E5;
 
 
 //New Companies
 
-h1{
-    color: red;
-    
+body{
+
+    background: $greycolor2;
+    height: 100vh;
+    //overflow-x: hidden;
+    //overflow-y: hidden;
+    background-image: url('../../assets/images/wave.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    h1{
+        color: $redcolor;
+        font-family: $font;
+        text-align: center;
+        padding-bottom: 120px;
+        padding-top: 50px;
+    }
+
+    .container{
+        text-align:center;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 500px;
+            margin: auto;
+            line-height:30px;
+
+            .submit{
+                width: 100px;
+                height: 50px;
+            }
+        }
+    }
 }
