@@ -13,24 +13,26 @@ use app\controller\WelcomeController;
 
 switch ($url) {
     case '/welcome':
-        $welcome = new WelcomeController();
-        $welcome->getView();
+        $test = new WelcomeController();
+        $test->getLastCompanies();
+        $test->getLastInvoices();
+        $test->getLastContact();
         break;
 
     case '/noadmin/Companies':
         $companiesList = new CompaniesController();
-        $companiesList->getCompaniesList();
+        $companiesList->getAllClients();
+        $companiesList->getAllSuppliers();
         break;
 
     case '/noadmin/Contact':
         $contactList = new ContactController();
-        $contactList->getContactList();
         $contactList->getAllContact();
         break;
 
     case '/noadmin/Invoices':
         $invoicesList = new InvoicesController();
-        $invoicesList->getInvoicesList();
+        $invoicesList->getAllInvoices();
         break;
 
     case '/admin/NewCompanies':

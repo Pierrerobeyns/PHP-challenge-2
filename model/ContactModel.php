@@ -3,6 +3,7 @@
 namespace app\model;
 
 use app\model\Database;
+use \PDO;
 
 class ContactModel 
 {
@@ -22,7 +23,7 @@ class ContactModel
                 on people.id = company.id";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 }

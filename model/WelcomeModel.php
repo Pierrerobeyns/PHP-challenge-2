@@ -3,6 +3,7 @@
 namespace app\model;
 
 use app\model\Database;
+use \PDO;
 
 class WelcomeModel
 {
@@ -20,11 +21,10 @@ class WelcomeModel
             FROM invoice
             INNER JOIN company 
             on invoice.id = company.id 
-            ORDER BY id asc
             LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 
@@ -35,11 +35,10 @@ class WelcomeModel
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 
-            ORDER BY id asc
             LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 
@@ -52,11 +51,10 @@ class WelcomeModel
                 on people.id = company.id 
             INNER JOIN type 
                 on company.id = type.id 
-            ORDER BY id asc
             LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 }

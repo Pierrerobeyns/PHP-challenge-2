@@ -7,11 +7,6 @@ use app\model\ContactModel;
 
 class ContactController extends Controller
 {
-    public function getContactList()
-    {
-        return $this->view('noadmin/Contact');
-    }
-
     public function getAllContact()
     {
         $allContact = new ContactModel();

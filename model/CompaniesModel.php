@@ -3,6 +3,7 @@
 namespace app\model;
 
 use app\model\Database;
+use \PDO;
 
 class CompaniesModel 
 {
@@ -25,14 +26,14 @@ class CompaniesModel
             WHERE type = 'Client'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 
     public function readAllCompaniesSuppliers()
     {
         $query = 
-            "SELECT lastname, firstame, vatnumber, country 
+            "SELECT lastname, firstname, vatnumber, country 
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 
@@ -41,7 +42,7 @@ class CompaniesModel
             WHERE type = 'Supplier'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 

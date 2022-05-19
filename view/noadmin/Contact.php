@@ -1,17 +1,7 @@
+<h1>All contacts</h1>
 
-<body>
-    <table>
-        <thead>
-            <tr>
-                <th>Fistname</th>
-                <th>Lastname</th>
-                <th>Phone number</th>
-                <th>Mail</th>
-                <th>Company</th>
-            </tr>
-        </thead>
-        <tbody>
+<?php
 
-        </tbody>
-    </table>
-</body>
+echo "<pre>";
+var_dump($array);
+echo "</pre>";

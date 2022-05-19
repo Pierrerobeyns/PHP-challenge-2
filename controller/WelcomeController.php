@@ -7,15 +7,11 @@ use app\model\WelcomeModel;
 
 class WelcomeController extends Controller
 {
-    public function getView()
-    {
-        return $this->view('welcome');
-    }
-
     public function getLastInvoices()
     {
         $lastInvoices = new WelcomeModel();
         $FiveInvoices = $lastInvoices->readLastInvoices();
+        
         return $this->view('welcome', $FiveInvoices);
     }
 
@@ -23,6 +19,7 @@ class WelcomeController extends Controller
     {
         $lastContact = new WelcomeModel();
         $FiveContact = $lastContact->readLastInvoices();
+
         return $this->view('welcome', $FiveContact);
     }
 
@@ -30,6 +27,7 @@ class WelcomeController extends Controller
     {
         $lastCompanies = new WelcomeModel();
         $FiveCompanies = $lastCompanies->readLastInvoices();
+
         return $this->view('welcome', $FiveCompanies);
     }
 }
