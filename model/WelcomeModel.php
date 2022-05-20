@@ -24,7 +24,7 @@ class WelcomeModel
             LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         return $result;
     }
 
@@ -38,7 +38,7 @@ class WelcomeModel
             LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         return $result;
     }
 
@@ -54,7 +54,7 @@ class WelcomeModel
             LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         return $result;
     }
 }
