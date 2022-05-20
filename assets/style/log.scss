@@ -1,0 +1,80 @@
+/** VARIABLES ************************************************************************************************************/
+$font: 'Quicksand', sans-serif;
+$redcolor: #A31621;
+$blackcolor: #293132;
+$greycolor: #CDCDCD;
+$greycolor2: #EEE5E5;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/******************************************************************************************************************/
+/* LOGIN & REGISTER PAGES *****************************************************************************************/
+/******************************************************************************************************************/
+
+body {
+    font-family: $font;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+
+    background: {
+        image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../img/log-background.jpg');
+        background-size: cover;
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+        attachment: fixed;
+    }
+
+    .connect-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+
+        .welcome-msg {
+            font-size: 42px;
+        }
+
+        .sub-welcome-msg {
+            font-size: 32px;
+        }
+
+        .ipt-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 2rem;
+            width: 360px;
+
+            input {
+                padding: 18px 15px;
+                outline: none;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+
+            .ipt-text,
+            .ipt-name {
+                border: $redcolor 1px solid;
+            }
+
+            .ipt-name-container {
+                display: flex;
+                gap: 10px;
+            }
+
+            .ipt-name {
+                width: 50%;
+            }
+
+            .ipt-sub {
+                background-color: $redcolor;
+                border: none;
+                color: white;
+                font-size: 16px;
+            }
+        }
+    }
+}

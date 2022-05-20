@@ -21,8 +21,7 @@ switch ($url) {
 
     case '/noadmin/Companies':
         $companiesList = new CompaniesController();
-        $companiesList->getAllClients();
-        $companiesList->getAllSuppliers();
+        $companiesList->getAllTableCompanies();
         break;
 
     case '/noadmin/Contact':

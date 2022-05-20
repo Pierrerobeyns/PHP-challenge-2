@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr>
-            <?php foreach ($array as $elem) {
+            <?php foreach ($array1 as $elem) {
                 echo "<tr>";
                     echo "<td>";
                     echo $elem[0];

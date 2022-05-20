@@ -1,0 +1,69 @@
+$redcolor: #A31621;
+$blackcolor: #293132;
+$greycolor: #CDCDCD;
+$greycolor2: #EEE5E5;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+$font: 'Quicksand', sans-serif;
+
+body {
+    margin: 0 auto;
+    font-family: $font;
+    background-color: $greycolor2;
+
+    .p-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 2em 0;
+
+
+        .welcome-title {
+            font-size: 42px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .new-container {
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            text-decoration: none;
+            color: $redcolor;
+            background-color: none;
+            border: $redcolor 1px solid;
+            border-radius: 5px;
+            padding: 15px 25px;
+            transition: all 0.3s;
+            &:hover{
+                background-color: $redcolor;
+                color: white;
+            }
+        }
+    }
+
+    .table-container {
+        margin-left: 10%;
+
+        p {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}

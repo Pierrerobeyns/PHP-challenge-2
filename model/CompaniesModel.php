@@ -26,14 +26,14 @@ class CompaniesModel
             WHERE type = 'Client'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         return $result;
     }
 
     public function readAllCompaniesSuppliers()
     {
         $query = 
-            "SELECT lastname, firstname, vatnumber, country 
+            "SELECT company, vatnumber, country 
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 
@@ -42,7 +42,7 @@ class CompaniesModel
             WHERE type = 'Supplier'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         return $result;
     }
 

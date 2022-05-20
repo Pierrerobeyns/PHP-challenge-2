@@ -1,0 +1,87 @@
+/** VARIABLES ************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/******************************************************************************************************************/
+/* LOGIN & REGISTER PAGES *****************************************************************************************/
+/******************************************************************************************************************/
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../img/log-background.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../img/log-background.jpg");
+  background-background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body .connect-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+}
+
+body .connect-section .welcome-msg {
+  font-size: 42px;
+}
+
+body .connect-section .sub-welcome-msg {
+  font-size: 32px;
+}
+
+body .connect-section .ipt-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  margin-top: 2rem;
+  width: 360px;
+}
+
+body .connect-section .ipt-container input {
+  padding: 18px 15px;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+body .connect-section .ipt-container .ipt-text,
+body .connect-section .ipt-container .ipt-name {
+  border: #A31621 1px solid;
+}
+
+body .connect-section .ipt-container .ipt-name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+body .connect-section .ipt-container .ipt-name {
+  width: 50%;
+}
+
+body .connect-section .ipt-container .ipt-sub {
+  background-color: #A31621;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+/*# sourceMappingURL=log.css.map */

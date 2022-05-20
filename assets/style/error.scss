@@ -1,0 +1,46 @@
+$font: 'Quicksand', sans-serif;
+$redcolor: #A31621;
+$blackcolor: #293132;
+$greycolor: #CDCDCD;
+$greycolor2: #EEE5E5;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background-color: $greycolor2;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: $font;
+
+    background: {
+        size: contain ;
+        attachment: fixed;
+        image: url("../img/wave.svg");
+        repeat: no-repeat;
+        position: bottom;
+    }
+
+    .error-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: inherit;
+        min-height: 70vh;
+        width: 100%;
+        gap: 3rem;
+
+        a {
+            padding: 15px 25px;
+            background-color: $redcolor;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            letter-spacing: 0.2em;
+        }
+    }
+}

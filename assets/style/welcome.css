@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+body {
+  margin: 0 auto;
+  font-family: "Quicksand", sans-serif;
+  background-color: #EEE5E5;
+}
+
+body .p-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0;
+}
+
+body .p-container .welcome-title {
+  font-size: 42px;
+}
+
+body .p-container .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .p-container .text-container p {
+  font-size: 24px;
+}
+
+body .new-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5em;
+}
+
+body .new-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #A31621;
+  background-color: none;
+  border: #A31621 1px solid;
+  border-radius: 5px;
+  padding: 15px 25px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .new-container a:hover {
+  background-color: #A31621;
+  color: white;
+}
+
+body .table-container {
+  margin-left: 10%;
+}
+
+body .table-container p {
+  font-size: 24px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=welcome.css.map */
