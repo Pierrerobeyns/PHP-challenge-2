@@ -17,4 +17,11 @@ class CompaniesController extends Controller
             return $this->view('noadmin/CompaniesDetails', $companiesDetails);
         }
     }
+
+    public function getCompaniesId()
+    {
+        $debug = new CompaniesModel();
+        $id = $debug->getCompaniesID();
+        return $id;
+    }
 }

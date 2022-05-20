@@ -33,4 +33,12 @@ class InvoicesModel
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function newInvoice($invoice, $date, $company, $contact)
+    {
+        $query = "INSERT INTO invoice (numberinvoice,date,id_people,id_company)
+        VALUES('$invoice', '$date',$contact,$company )";
+        $prepare = $this->db->getInstance()->prepare($query);
+        $prepare->execute();
+    }
 }

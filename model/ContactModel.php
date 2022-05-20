@@ -31,4 +31,22 @@ class ContactModel
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function getUserID()
+    {
+        $query = "SELECT *
+        FROM people";
+        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function newContact($firstName, $lastName, $phone, $email, $id_company)
+    {
+        $query = "INSERT INTO people (firstname,lastname,phone,email, id_company)
+        VALUES('$firstName', '$lastName', '$phone', '$email', $id_company)";
+        $prepare = $this->db->getInstance()->prepare($query);
+        $prepare->execute();
+    }
 }

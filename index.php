@@ -44,12 +44,15 @@ switch ($url) {
         break;
 
     case '/admin/newcontact':
-        $newContact = new ContactController();
-        $newContact->newContact();
+        $add = new ContactController();
+        $add->newContact();
         break;
 
     case '/admin/newinvoices':
         $newContact = new InvoicesController();
         $newContact->newInvoice();
+        break;
+
+    case '/debug':
         break;
 }

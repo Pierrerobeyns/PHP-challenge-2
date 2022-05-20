@@ -37,4 +37,14 @@ class CompaniesModel
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function getCompaniesID()
+    {
+        $query = "SELECT *
+        FROM company";
+        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
