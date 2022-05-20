@@ -20,10 +20,10 @@ class ContactModel
             "SELECT lastname, firstname, phone, email, company 
             FROM people 
             INNER JOIN company 
-                on people.id = company.id";
+                on people.id_company = company.id";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         return $result;
     }
 }
