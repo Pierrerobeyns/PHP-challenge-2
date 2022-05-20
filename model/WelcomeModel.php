@@ -30,13 +30,13 @@ class WelcomeModel
 
     public function readLastContact()
     {
-        $query = 
+        $query2 = 
             "SELECT lastname, firstname, phone, email, company 
             FROM people 
-            INNER JOIN company 
-                on people.id = company.id 
+            INNER JOIN company
+                on people.id_company = company.id
             LIMIT 5";
-        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt = $this->db->getInstance()->prepare($query2);
         $stmt->execute();
         $result = $stmt->fetchAll();
         return $result;
@@ -45,7 +45,7 @@ class WelcomeModel
     public function readLastCompanies()
     {
         $query = 
-            "SELECT lastname, firstname, vatnumber, country, type 
+            "SELECT company, vatnumber, country, type 
             FROM people 
             INNER JOIN company 
                 on people.id = company.id 
