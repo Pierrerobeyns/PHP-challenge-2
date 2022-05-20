@@ -14,9 +14,9 @@ class CompaniesController extends Controller
 
     public function getAllTableCompanies()
     {
-        $allSuppliers = new CompaniesModel();
-        $Suppliers = $allSuppliers->readAllCompaniesSuppliers();
-        $Clients = $allSuppliers->readAllCompaniesClients();
+        $allCompanies = new CompaniesModel();
+        $Suppliers = $allCompanies->readAllCompaniesSuppliers();
+        $Clients = $allCompanies->readAllCompaniesClients();
         return $this->view('noadmin/Companies', $Suppliers, $Clients);
     }
 }
