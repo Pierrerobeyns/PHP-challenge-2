@@ -24,8 +24,13 @@ body {
             font-size: 42px;
         }
 
-        .welcome-txt {
-            font-size: 24px;
+        .text-container {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-size: 24px;
+            }
         }
     }
 
@@ -40,16 +45,23 @@ body {
             gap: 15px;
 
             text-decoration: none;
-            color: white;
-            background-color: $redcolor;
-            border: none;
+            color: $redcolor;
+            background-color: none;
+            border: $redcolor 1px solid;
             border-radius: 5px;
             padding: 15px 25px;
+            transition: all 0.3s;
+            &:hover{
+                background-color: $redcolor;
+                color: white;
+            }
         }
     }
-    .table-container{
-        margin-left: 12%;
-        p{
+
+    .table-container {
+        margin-left: 10%;
+
+        p {
             font-size: 24px;
             font-weight: 700;
         }

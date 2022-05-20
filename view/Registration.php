@@ -12,7 +12,7 @@
 
 <body>
     <?php
-        require './template/navbar.php';
+        require './template/header.php';
     ?>
     <div class="connect-section">
         <div class="welcome-msg">

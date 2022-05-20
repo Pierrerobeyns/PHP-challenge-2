@@ -16,8 +16,10 @@
     ?>
     <div class="p-container">
         <p class="welcome-title">Welcome to the COGIP</p>
-        <p class="welcome-txt">Hello Boss</p>
-        <p class="welcome-txt">What would you do </p>
+        <div class="text-container">
+            <p>Hello Boss</p>
+            <p>What would you do today ? </p>
+        </div>
     </div>
     <div class="new-container">
         <a href="#"><img src="../assets/img/plus.svg" width="24px" />New Invoices</a>
