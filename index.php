@@ -14,9 +14,7 @@ use app\controller\WelcomeController;
 switch ($url) {
     case '/welcome':
         $test = new WelcomeController();
-        $test->getLastCompanies();
-        $test->getLastInvoices();
-        $test->getLastContact();
+        $test->getTableWelcome();
         break;
 
     case '/noadmin/Companies':
