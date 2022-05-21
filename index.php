@@ -39,7 +39,7 @@ switch ($url) {
         
     case '/Registration':
         $registration = new RegistrationController();
-        $registration->getViewRegistration();
+        $registration->newUser();
         break;
     
     default:

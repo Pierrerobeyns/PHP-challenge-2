@@ -1,5 +1,7 @@
 <?php
 
+namespace app\model;
+
 use app\model\Database;
 
 class RegistrationModel
@@ -11,11 +13,11 @@ class RegistrationModel
         return $this->db = new Database();
     }
 
-    public function isUser()
+    public function addUser($username, $name, $firstname, $mail, $password)
     {
         $query = 
-            "INSERT INTO users(name, firstname, username, mail, password)
-            VALUES (?,?,?,?,?)"; #Revoir la notation
+            "INSERT INTO users(username, lastname, firstname, mail, password)
+            VALUES ('$username', '$name', '$firstname', '$mail', '$password')";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
     }
