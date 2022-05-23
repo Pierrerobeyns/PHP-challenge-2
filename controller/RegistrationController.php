@@ -11,14 +11,21 @@ class RegistrationController extends Controller
     public function newUser()
     {
         if(!empty($_POST['username']) && !empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['mail']) && !empty($_POST['password'])) {
-            $username = htmlspecialchars($_POST['username']);
-            $name = htmlspecialchars($_POST['name']);
-            $firstname = htmlspecialchars($_POST['firstname']);
-            $mail = htmlspecialchars($_POST['mail']);
-            $password = htmlspecialchars($_POST['password']);
+            $username = $_POST['username'];
+            $name = $_POST['name'];
+            $firstname = $_POST['firstname'];
+            $mail = $_POST['mail'];
+            $password = $_POST['password'];
             
+            #Sanitization
+            $usernameFilter = htmlspecialchars($username);
+            $nameFilter = htmlspecialchars($name);
+            $firstnameFilter = htmlspecialchars($firstname);
+            $mailFilter = filter_var($mail, FILTER_SANITIZE_EMAIL);
+            $passwordFilter = htmlspecialchars($password);
+
             $newUser = new RegistrationModel();
-            $newUser->addUser($username, $name, $firstname, $mail, $password);
+            $newUser->addUser($usernameFilter, $nameFilter, $firstnameFilter, $mailFilter, $passwordFilter);
 
             $lastTables = new WelcomeModel();
             $FiveInvoices = $lastTables->readLastInvoices();
