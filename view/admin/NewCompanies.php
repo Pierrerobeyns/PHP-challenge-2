@@ -11,6 +11,10 @@
     <label for="NewCompanies">Phone Number</label>
     <input type="tel" class="phone" id="phone" name="phone" placeholder="0123/456789">
 
+    <!--Country -->
+    <label for="NewCompanies">Country</label>
+    <input type="text" class="country" id="country" name="country" placeholder="Country">
+
     <!--Company Type-->
     <label for="company-type">Company Type</label>
     <select id="companytype" name="companytype">
