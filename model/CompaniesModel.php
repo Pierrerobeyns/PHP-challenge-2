@@ -17,12 +17,10 @@ class CompaniesModel
     public function readAllCompaniesClients()
     {
         $query = 
-            "SELECT company, vatnumber, country 
-            FROM people 
-            INNER JOIN company 
-                on people.id = company.id 
+            "SELECT DISTINCT company, vatnumber, country 
+            FROM company 
             INNER JOIN type 
-                on company.id = type.id 
+                on company.id = type.id_company 
             WHERE type = 'Client'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
@@ -33,12 +31,10 @@ class CompaniesModel
     public function readAllCompaniesSuppliers()
     {
         $query = 
-            "SELECT company, vatnumber, country 
-            FROM people 
-            INNER JOIN company 
-                on people.id = company.id 
+            "SELECT DISTINCT company, vatnumber, country
+            FROM company 
             INNER JOIN type 
-                on company.id = type.id 
+                on company.id = type.id_company 
             WHERE type = 'Supplier'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();

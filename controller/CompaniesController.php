@@ -18,7 +18,7 @@ class CompaniesController extends Controller
         $allCompanies = new CompaniesModel();
         $Suppliers = $allCompanies->readAllCompaniesSuppliers();
         $Clients = $allCompanies->readAllCompaniesClients();
-        return $this->view('noadmin/Companies', $Suppliers, $Clients);
+        return $this->view('noadmin/Companies', $Clients, $Suppliers);
     }
 
     public function addNewCompanies() 
