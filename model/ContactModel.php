@@ -16,11 +16,11 @@ class ContactModel
 
     public function getContactDetail($id)
     {
-        $query = "SELECT people.firstname as fiestName,
+        $query = "SELECT people.firstname as firstName,
         people.lastname as lastName,
         people.email as email, people.phone as phone,
-        company.company as companyName,
-        invoice.numberinvoice as numberInvoice,
+        company.company as company,
+        invoice.numberinvoice as invoiceNumber,
         invoice.date as invoiceDate 
         FROM people 
         INNER JOIN company ON people.id = company.id 

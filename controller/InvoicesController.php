@@ -30,10 +30,10 @@ class InvoicesController extends Controller
         $idUsers = $getUsers->getUserID();
         if ($bool == true) {
 
-            $invoice = 'F' . $_POST['invoices'];
-            $date = $_POST['date'];
-            $nameCompanies = $_POST['nameCompanies'];
-            $nameContact = $_POST['nameContact'];
+            $invoice = trim(htmlspecialchars('F' . $_POST['invoices']));
+            $date = trim(htmlspecialchars($_POST['date']));
+            $nameCompanies = trim(htmlspecialchars($_POST['nameCompanies']));
+            $nameContact = trim(htmlspecialchars($_POST['nameContact']));
 
             var_dump($invoice, $date, $nameCompanies, $nameContact);
             $newContact = new InvoicesModel();

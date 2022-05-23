@@ -52,7 +52,4 @@ switch ($url) {
         $newContact = new InvoicesController();
         $newContact->newInvoice();
         break;
-
-    case '/debug':
-        break;
 }

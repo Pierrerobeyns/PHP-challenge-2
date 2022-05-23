@@ -24,18 +24,20 @@ class ContactController extends Controller
     {
         $check = new CheckingData();
         $bool = $check->checkingData($_POST['name'], $_POST['firstname'], $_POST['phone'], $_POST['email'], $_POST['nameCompanies']);
+
         $getIdCompanies = new CompaniesController();
         $idCompagnies = $getIdCompanies->getCompaniesId();
         if ($bool == true) {
 
-            $name = $_POST['name'];
-            $firstName = $_POST['firstname'];
-            $phone = $_POST['phone'];
-            $email = $_POST['email'];
+            $firstName = trim(htmlspecialchars($_POST['name']));
+            $name = trim(htmlspecialchars($_POST['firstname']));
+            $phone = trim(htmlspecialchars($_POST['phone']));
+            $emailTrim = trim(htmlspecialchars($_POST['email']));
+            $emailFilter = filter_var($emailTrim, FILTER_SANITIZE_EMAIL);
             $company = $_POST['nameCompanies'];
 
             $newContact = new ContactModel();
-            $newContact->newContact($name, $firstName, $phone, $email, $company);
+            $newContact->newContact($name, $firstName, $phone, $emailFilter, $company);
             return $this->view('welcome');
         } else {
             return $this->view('admin/NewContact', $idCompagnies);

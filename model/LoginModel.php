@@ -1,9 +1,12 @@
 <?php
+
 namespace app\model;
+
+session_start();
 
 use app\model\Database;
 
-class LoginModel 
+class LoginModel
 {
     public $db;
 
@@ -12,11 +15,11 @@ class LoginModel
         $this->db = new Database();
     }
 
-    function select()
+    function selectUsers()
     {
-        $req = "SELECT * FROM people";
+        $req = "SELECT * FROM users";
         $statement = $this->db->getInstance()->prepare($req);
-        $statement->execute();   
+        $statement->execute();
         $data = $statement->fetchAll($this->db->getInstance()::FETCH_ASSOC);
         return $data;
     }
