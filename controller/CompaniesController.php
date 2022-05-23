@@ -23,14 +23,22 @@ class CompaniesController extends Controller
 
     public function addNewCompanies() 
     {
-        if(!empty($_POST['newcompany']) && !empty($_POST['tvanumber']) && !empty($_POST['phone']) && !empty($_POST['companytype'])) {
-            $newcompany = htmlspecialchars($_POST['newcompany']);
-            $tvanumber = htmlspecialchars($_POST['tvanumber']);
-            $phone = htmlspecialchars($_POST['phone']);
-            $companytype = htmlspecialchars($_POST['companytype']);
+        if(!empty($_POST['newcompany']) && !empty($_POST['tvanumber']) && !empty($_POST['phone']) && !empty($_POST['companytype']) && !empty($_POST['country'])) {
+            $newcompany = $_POST['newcompany'];
+            $country=$_POST['country'];
+            $tvanumber = $_POST['tvanumber'];
+            $phone = $_POST['phone'];
+            $companytype = $_POST['companytype'];
+
+            #Sanitization
+            $newcompanyFilter = htmlspecialchars($newcompany);
+            $countryFilter = htmlspecialchars($country);
+            $tvanumberFilter = htmlspecialchars($tvanumber);
+            $phoneFilter = htmlspecialchars($phone);
+            $companytypeFilter = htmlspecialchars($companytype);
 
             $newCompanies = new CompaniesModel();
-            $newCompanies->createNewCompanies($newcompany, $tvanumber, $phone, $companytype);
+            $newCompanies->createNewCompanies($newcompanyFilter, $countryFilter, $tvanumberFilter, $phoneFilter, $companytypeFilter);
 
             $lastTables = new WelcomeModel();
             $FiveInvoices = $lastTables->readLastInvoices();

@@ -46,11 +46,11 @@ class CompaniesModel
         return $result;
     }
 
-    public function createNewCompanies($company, $vatnumber, $phonecompany, $typecompany)
+    public function createNewCompanies($company,$country, $vatnumber, $phonecompany, $typecompany)
     {
         $query = 
-        "INSERT INTO company(company, vatnumber, phonecompany, typecompany)
-        VALUES ('$company', '$vatnumber', '$phonecompany', '$typecompany')"; #TODO
+        "INSERT INTO company(company, country, vatnumber, phonecompany, typecompany)
+        VALUES ('$company', '$country', '$vatnumber', '$phonecompany', '$typecompany')"; #TODO
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
