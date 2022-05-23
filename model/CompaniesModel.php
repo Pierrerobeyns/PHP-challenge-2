@@ -19,9 +19,7 @@ class CompaniesModel
         $query = 
             "SELECT DISTINCT company, vatnumber, country 
             FROM company 
-            INNER JOIN type 
-                on company.id = type.id_company 
-            WHERE type = 'Client'";
+            WHERE typecompany = 'Client'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
@@ -33,9 +31,7 @@ class CompaniesModel
         $query = 
             "SELECT DISTINCT company, vatnumber, country
             FROM company 
-            INNER JOIN type 
-                on company.id = type.id_company 
-            WHERE type = 'Supplier'";
+            WHERE typecompany = 'Supplier'";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();

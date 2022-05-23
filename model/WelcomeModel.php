@@ -48,9 +48,7 @@ class WelcomeModel
         $query = 
             "SELECT company, vatnumber, country, typecompany 
             FROM company
-            INNER JOIN  people
-                on people.id = company.id 
-            ORDER BY people.id DESC LIMIT 5";
+            ORDER BY id DESC LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();

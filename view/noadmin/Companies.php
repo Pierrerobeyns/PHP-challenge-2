@@ -1,6 +1,6 @@
 <h1>Companies directory</h1>
 
-<h3>Client</h3>
+<h3>Clients</h3>
 
 <table>
 <thead>
