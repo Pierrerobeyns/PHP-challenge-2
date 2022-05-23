@@ -5,11 +5,11 @@
 
     <!--TVA Number-->
     <label for="NewCompanies">TVA Number</label>
-    <input type="text" class="tva" id="tvanumber" name="tvanumber" placeholder="123-456-789">
+    <input type="text" class="tva" id="tvanumber" name="tvanumber" placeholder="AA111 111 111">
 
     <!--Phone Number-->
     <label for="NewCompanies">Phone Number</label>
-    <input type="tel" class="phone" id="phone" name="phone" placeholder="0123/456789">
+    <input type="tel" class="phone" id="phone" name="phone" placeholder="0123 45 67 89">
 
     <!--Country -->
     <label for="NewCompanies">Country</label>
