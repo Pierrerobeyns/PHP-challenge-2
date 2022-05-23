@@ -56,7 +56,7 @@
     </div>
 
     <div class="table-pos">
-        <div class="table-styl">
+        <div class="table-styl" >
             <h3>Suppliers</h3>
 
             <table>
