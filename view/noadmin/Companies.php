@@ -23,7 +23,7 @@
 
     <div class="table-pos">
         <div class="table-styl">
-            <h3>Client</h3>
+            <h3>Clients</h3>
 
             <table>
                 <thead>
@@ -51,12 +51,12 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
 
     <div class="table-pos">
         <div class="table-styl">
-
             <h3>Suppliers</h3>
 
             <table>
@@ -85,6 +85,7 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
 

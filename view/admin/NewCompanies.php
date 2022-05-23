@@ -6,21 +6,21 @@
     <!--TVA Number-->
     <label for="NewCompanies">TVA Number</label>
     <input type="text" class="tva" id="tvanumber" name="tvanumber" placeholder="AA111 111 111">
-
+    
     <!--Phone Number-->
     <label for="NewCompanies">Phone Number</label>
     <input type="tel" class="phone" id="phone" name="phone" placeholder="0123 45 67 89">
-
+    
     <!--Country -->
     <label for="NewCompanies">Country</label>
     <input type="text" class="country" id="country" name="country" placeholder="Country">
-
+    
     <!--Company Type-->
     <label for="company-type">Company Type</label>
     <select id="companytype" name="companytype">
         <option value="Client">Client</option>
         <option value="Supplier">Supplier</option>
     </select>
-
+    
     <input type="submit" value="Submit" class="submit">
 </form>
