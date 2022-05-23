@@ -1,7 +1,5 @@
 <h1>Welcome</h1>
 
-<?php echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT); ?>
-
 <h3>Last invoices :</h3>
 
 <table>
