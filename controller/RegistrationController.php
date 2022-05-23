@@ -27,11 +27,7 @@ class RegistrationController extends Controller
             $newUser = new RegistrationModel();
             $newUser->addUser($usernameFilter, $nameFilter, $firstnameFilter, $mailFilter, $passwordFilter);
 
-            $lastTables = new WelcomeModel();
-            $FiveInvoices = $lastTables->readLastInvoices();
-            $FiveContact = $lastTables->readLastContact();
-            $FiveCompanies = $lastTables->readLastCompanies();
-            return $this->view('welcome', $FiveInvoices,$FiveContact,$FiveCompanies);
+            return $this->view('login');
         } else {
             return $this->view('Registration');
         }

@@ -46,13 +46,11 @@ class WelcomeModel
     public function readLastCompanies()
     {
         $query = 
-            "SELECT company, vatnumber, country, type 
-            FROM people 
-            INNER JOIN company 
+            "SELECT company, vatnumber, country, typecompany 
+            FROM company
+            INNER JOIN  people
                 on people.id = company.id 
-            INNER JOIN type 
-                on company.id = type.id 
-                ORDER BY people.id DESC LIMIT 5";
+            ORDER BY people.id DESC LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
