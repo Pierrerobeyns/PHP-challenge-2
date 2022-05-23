@@ -10,7 +10,7 @@ class RegistrationController extends Controller
 {
     public function newUser()
     {
-        if(isset($_POST['username']) && isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['mail']) && isset($_POST['password'])) {
+        if(!empty($_POST['username']) && !empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['mail']) && !empty($_POST['password'])) {
             $username = $_POST['username'];
             $name = $_POST['name'];
             $firstname = $_POST['firstname'];
