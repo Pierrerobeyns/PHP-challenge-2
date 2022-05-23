@@ -34,12 +34,12 @@ switch ($url) {
 
     case '/admin/NewCompanies':
         $newCompanies = new CompaniesController();
-        $newCompanies->getNewCompanies();
+        $newCompanies->addNewCompanies();
         break;
         
     case '/Registration':
         $registration = new RegistrationController();
-        $registration->getViewRegistration();
+        $registration->newUser();
         break;
     
     default:
