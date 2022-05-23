@@ -21,7 +21,7 @@
         <div class="sub-welcome-msg">
             <p>Welcome in the connexion space of COGIP</p>
         </div>
-        <form action="#" method="get">
+        <form action="#" method="post">
             <div class="ipt-container">
                 <input class="ipt-text" type="text" name="username" placeholder="username">
                 <input class="ipt-text" type="text" name="password" placeholder="password">
