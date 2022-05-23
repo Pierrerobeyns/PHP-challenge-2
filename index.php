@@ -34,7 +34,7 @@ switch ($url) {
 
     case '/admin/NewCompanies':
         $newCompanies = new CompaniesController();
-        $newCompanies->getNewCompanies();
+        $newCompanies->addNewCompanies();
         break;
         
     case '/Registration':
