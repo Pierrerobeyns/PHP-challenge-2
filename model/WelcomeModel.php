@@ -17,7 +17,7 @@ class WelcomeModel
     public function readLastInvoices()
     {
         $query = 
-            "SELECT numberinvoice, date , company 
+            "SELECT numberinvoice as InvoicesNumber, date as Date, company as Company
             FROM invoice
             INNER JOIN company 
             on invoice.id = company.id 
@@ -31,7 +31,7 @@ class WelcomeModel
     public function readLastContact()
     {
         $query2 = 
-            "SELECT lastname, firstname, phone, email, company
+            "SELECT lastname as Lastname, firstname as Firstname, phone as Phone, email as Email, company as Company
             FROM people 
             INNER JOIN company
                 on people.id_company = company.id
@@ -46,7 +46,7 @@ class WelcomeModel
     public function readLastCompanies()
     {
         $query = 
-            "SELECT company, vatnumber, country, typecompany 
+            "SELECT company as Company, vatnumber as TVANumber, country as Country, typecompany as TypeCompany
             FROM company
             ORDER BY id DESC LIMIT 5";
         $stmt = $this->db->getInstance()->prepare($query);
