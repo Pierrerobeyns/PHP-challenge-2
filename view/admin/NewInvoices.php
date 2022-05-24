@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../assets/style/form.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/style/header.css" />
     <title>New Invoices</title>
 </head>
 
 <body>
-
     <h1>Create new invoices</h1>
 
     <form action="" method="post">
