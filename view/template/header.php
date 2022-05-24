@@ -6,6 +6,7 @@
             <a href="/noadmin/invoices" class="nav-item">Invoices</a>
             <a href="/noadmin/companies" class="nav-item">Companies</a>
             <a href="/noadmin/contact" class="nav-item">Contact</a>
+            <a href="/welcome" class="nav-item">Dashboard</a>
 
         </div>
         <div class="nav-button">
