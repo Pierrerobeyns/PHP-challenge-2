@@ -1,7 +1,7 @@
 <header>
     <nav>
         <div class="nav-bar">
-            <a href="../view/HomePage.php" class="nav-item"><img src="../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
+            <a href="../view/HomePage.php" class="nav-item"><img src="../../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
             <a href="../view/HomePage.php" class="nav-item">Home</a>
             <a href="#" class="nav-item">Invoices</a>
             <a href="#" class="nav-item">Companies</a>
