@@ -20,6 +20,6 @@
 
 # Authors 
 
-Front-end team : [@Axel](https://github.com/SIRIEZ-Axel), [@Pierre](https://github.com/Pierrerobeyns), [@Phillipe](https://github.com/philouLeF),
+Front-end team : [@Axel](https://github.com/SIRIEZ-Axel), [@Phillipe](https://github.com/philouLeF), [@Pierre](https://github.com/Pierrerobeyns)
 
 Back-end team : [@Loïc](https://github.com/CalcagnoLoic), [@Nicolas](https://github.com/Kurner)
