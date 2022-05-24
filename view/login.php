@@ -49,6 +49,8 @@ session_start();
             </form>
         </div>
         HTML;
+        } else {
+            echo "Vous étes déjà connecté, cassez-vous !";
         }
         ?>
 

@@ -12,7 +12,6 @@ class LoginController extends Controller
     public function loginPage()
     {
         $connected = false;
-        session_destroy();
         if (!empty($_POST['username']) and !empty($_POST['password'])) {
             $getUsers = new LoginModel();
             $users = $getUsers->selectUsers();
@@ -22,11 +21,11 @@ class LoginController extends Controller
 
             foreach ($users as $user) {
 
-                if ($username === $user['username'] and $username === "jean-christian-ranu" and $password === $user['password']) {
+                if ($username === $user['username'] and $username === "jean-christian-ranu" and password_verify($password, $user['password'])) {
 
                     $_SESSION['GOD-MODE'] = "Jean Christian Ranu";
                     $connected = true;
-                } else if ($username === $user['username'] and $username === "muriel-perrache" and $password === $user['password']) {
+                } else if ($username === $user['username'] and $username === "muriel-perrache" and password_verify($password, $user['password'])) {
 
                     $_SESSION['ADMIN-MODE'] = "Muriel Perrache";
                     $connected = true;
@@ -40,7 +39,8 @@ class LoginController extends Controller
                 echo "Something is wrong, chief !";
                 return $this->view('login');
             } else if ($connected == true) {
-                return $this->view('HomePage');
+                header('Location: http://localhost:8080/noadmin/invoices/1');
+                // return $this->view('HomePage');
             }
         } else if (isset($_POST['username']) || isset($_POST['password'])) {
             echo "Some data are missing, chief !";
