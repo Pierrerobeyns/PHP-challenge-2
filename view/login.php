@@ -12,7 +12,11 @@
 
 <body>
     <?php
-        require './template/header.php';
+
+use app\controller\Controller;
+
+        $header = new Controller;
+        $header -> view('./template/header')
     ?>
     <div class="connect-section">
         <div class="welcome-msg">

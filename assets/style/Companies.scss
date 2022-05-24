@@ -43,19 +43,19 @@ body {
             flex-direction: column;
 
             table {
-                th {
-                    font-size: 1.5em;
-                    border-bottom: #293132 1px solid;
-                    border-collapse: collapse;
-
-
+                border-collapse: collapse;
+                thead {
+                    th{
+                        font-size: 1.5em;
+                        border-bottom: #293132 1px solid;
+                        padding: 1em;
+                    }
                 }
                     tbody {
                         tr {
-                            border-bottom: 1px solid #293132;
-                            border-collapse: collapse;
                             td {
-                                padding: 1em 2em;
+                                border-bottom: 1px solid #293132;
+                                padding: 1.5em 2em;
                                 font-size: 1.3em;
                             }
                         }
