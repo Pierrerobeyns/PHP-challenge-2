@@ -7,6 +7,7 @@
             <a href="/noadmin/companies" class="nav-item">Companies</a>
             <a href="/noadmin/contact" class="nav-item">Contact</a>
             <a href="/welcome" class="nav-item">Dashboard</a>
+
         </div>
         <div class="nav-button">
             <a href="/registration" class="sign-in">Sign in</a>

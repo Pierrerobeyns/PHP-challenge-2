@@ -41,9 +41,9 @@ if (!empty($_SESSION['GOD-MODE'])) {
         </div>
     </div>
     <div class="new-container">
-        <a href="/admin/newinvoices"><img src="../assets/img/plus.svg" width="24px" />New Invoices</a>
-        <a href="/admin/newcontact"><img src="../assets/img/plus.svg" width="24px" />New Contact</a>
-        <a href="/admin/newcompanies"><img src="../assets/img/plus.svg" width="24px" />New Company</a>
+        <a href="#"><img src="../assets/img/plus.svg" width="24px" />New Invoices</a>
+        <a href="#"><img src="../assets/img/plus.svg" width="24px" />New Contact</a>
+        <a href="#"><img src="../assets/img/plus.svg" width="24px" />New Company</a>
     </div>
 
 
