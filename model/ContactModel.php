@@ -17,7 +17,7 @@ class ContactModel
     public function readAllContact()
     {
         $query = 
-            "SELECT lastname, firstname, phone, email, company 
+            "SELECT lastname as Lastname, firstname as Firstname, phone as Phone, email as Email, company as Company
             FROM people 
             INNER JOIN company 
                 on people.id_company = company.id";
