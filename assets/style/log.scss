@@ -34,11 +34,18 @@ body {
         min-height: 80vh;
 
         .welcome-msg {
-            font-size: 42px;
+            font-size: 3.5em;
+            font-weight: bold;
         }
-
+        
         .sub-welcome-msg {
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            border-radius: 5px;
             font-size: 32px;
+            padding: 0 25px;
+            height: 75px;
+            display: flex;
+            align-items: center;
         }
 
         .ipt-container {

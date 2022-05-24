@@ -35,11 +35,22 @@ body .connect-section {
 }
 
 body .connect-section .welcome-msg {
-  font-size: 42px;
+  font-size: 3.5em;
+  font-weight: bold;
 }
 
 body .connect-section .sub-welcome-msg {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
   font-size: 32px;
+  padding: 0 25px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .connect-section .ipt-container {

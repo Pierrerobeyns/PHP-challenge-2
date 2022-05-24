@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+//METTRE LES ELEMENTS HTML QUI CORRESPONDENT AUX COMPTES RESPECTIFS 
+if (!empty($_SESSION['GOD-MODE'])) {
+    echo "SALUT " . $_SESSION['GOD-MODE'];
+} else if (!empty($_SESSION['ADMIN-MODE'])) {
+
+    echo "Salut " . $_SESSION['ADMIN-MODE'];
+} else if (!empty($_SESSION['CUSTOMER'])) {
+    echo "Salut " . $_SESSION['CUSTOMER'];
+}
+
+"coucou";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +27,11 @@
 
 <body>
     <?php
-    require './template/header.php';
+
+    use app\controller\Controller;
+
+    $test = new Controller;
+    $test->view('/template/header');
     ?>
     <div class="p-container">
         <p class="welcome-title">Welcome to the COGIP</p>
@@ -27,15 +46,107 @@
         <a href="#"><img src="../assets/img/plus.svg" width="24px" />New Company</a>
     </div>
 
-    <div class="table-container">
-        <p>Last invoices</p>
-    </div>
-    <div class="table-container">
-        <p>Last companies</p>
-    </div>
-    <div class="table-container">
-        <p>Last Contact</p>
-    </div>
+
+    <h1>Welcome</h1>
+
+    <h3>Last invoices :</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice number</th>
+                <th>Dates</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <?php foreach ($array1 as $elem) {
+                    echo "<tr>";
+                    echo "<td>";
+                    echo $elem[0];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[1];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[2];
+                    echo "</td>";
+                    echo "<tr>";
+                }; ?>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Last contacts :</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Phone</th>
+                <th>Mail</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <?php foreach ($array2 as $elem) {
+                    echo "<tr>";
+                    echo "<td>";
+                    echo $elem[0];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[1];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[2];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[3];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[4];
+                    echo "</td>";
+                    echo "<tr>";
+                }; ?>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Last Companies :</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>VAT number</th>
+                <th>Country</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <?php foreach ($array3 as $elem) {
+                    echo "<tr>";
+                    echo "<td>";
+                    echo $elem[0];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[1];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[2];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $elem[3];
+                    echo "</td>";
+                    echo "<tr>";
+                }; ?>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>

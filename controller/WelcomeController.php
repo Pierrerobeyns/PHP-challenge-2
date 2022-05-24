@@ -7,27 +7,13 @@ use app\model\WelcomeModel;
 
 class WelcomeController extends Controller
 {
-    public function getLastInvoices()
+    public function getTableWelcome()
     {
-        $lastInvoices = new WelcomeModel();
-        $FiveInvoices = $lastInvoices->readLastInvoices();
+        $lastTables = new WelcomeModel();
+        $FiveInvoices = $lastTables->readLastInvoices();
+        $FiveContact = $lastTables->readLastContact();
+        $FiveCompanies = $lastTables->readLastCompanies();
         
-        return $this->view('welcome', $FiveInvoices);
-    }
-
-    public function getLastContact()
-    {
-        $lastContact = new WelcomeModel();
-        $FiveContact = $lastContact->readLastInvoices();
-
-        return $this->view('welcome', $FiveContact);
-    }
-
-    public function getLastCompanies()
-    {
-        $lastCompanies = new WelcomeModel();
-        $FiveCompanies = $lastCompanies->readLastInvoices();
-
-        return $this->view('welcome', $FiveCompanies);
+        return $this->view('welcome', $FiveInvoices,$FiveContact,$FiveCompanies);
     }
 }
