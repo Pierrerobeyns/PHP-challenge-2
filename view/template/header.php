@@ -1,8 +1,8 @@
 <header>
     <nav>
         <div class="nav-bar">
-            <a href="" class="nav-item"><img src="../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
-            <a href="" class="nav-item">Home</a>
+            <a href="/" class="nav-item"><img src="../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
+            <a href="/" class="nav-item">Home</a>
             <a href="/noadmin/invoices" class="nav-item">Invoices</a>
             <a href="/noadmin/companies" class="nav-item">Companies</a>
             <a href="/noadmin/contact" class="nav-item">Contact</a>
