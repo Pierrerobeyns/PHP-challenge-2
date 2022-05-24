@@ -11,49 +11,52 @@
 </head>
 
 <body>
-
     <?php
 
     use app\controller\Controller;
 
-    $navbar = new Controller();
-
-    $navbar->view("template/header");
-
+    $header = new Controller;
+    $header->view('./template/header');
     ?>
+    <h1>Create new invoices</h1>
 
-    <div class="container">
-        <h1>Create new invoices</h1>
+    <form action="" method="post">
 
-        <form action="./NewInvoices.php" method="post">
+        <!--Invoices Number-->
+        <label for="NewInvoices">Invoice Number</label>
+        <input type="text" id="invoice" name="invoices" placeholder="123-456-789">
 
-            <!--Invoices Number-->
-            <label for="NewInvoices">Invoice Number</label>
-            <input type="text" id="invoice" name="invoices" placeholder="123-456-789">
+        <!--Date-->
+        <label for="NewInvoices">Invoice Date</label>
+        <input type="date" id="date" name="date" placeholder="01-01-2000" min="2020-01-01" max="2030-12-31">
 
-            <!--Date-->
-            <label for="NewInvoices">Invoice Date</label>
-            <input type="date" id="date" name="date" placeholder="01-01-2000" min="2020-01-01" max="2030-12-31">
+        <!--Name of the company-->
+        <label for="compagnies">Compagnies:</label>
+        <select name="nameCompanies">
+            <?php foreach ($array1 as $company) {
+            ?>
+                <option value="<?php echo $company['id'] ?>"><?php echo $company['company'] ?></option>
+            <?php
+            }
+            ?>
+        </select>
 
-            <!--Name of the company-->
-            <label for="NewInvoices">Company</label>
-            <input type="text" id="company" name="company" placeholder="Company">
+        <!--Name of the contact-->
+        <label for="contact">Contact:</label>
+        <select name="nameContact">
+            <?php foreach ($array2 as $contact) {
+            ?>
+                <option value="<?php echo $contact['id'] ?>"><?php echo $contact['lastname'] . " " . $contact['firstname'] ?></option>
+            <?php
+            }
+            ?>
+        </select>
 
-            <!--Name of the contact-->
-            <label for="NewInvoices">Contact person regarding the invoice</label>
-            <input type="text" id="contact" name="contact" placeholder="John Smith">
 
-            <input type="submit" value="Submit" class="submit">
+        <input type="submit" value="Submit">
 
-        </form>
-    </div>
+    </form>
 
 </body>
 
 </html>
-
-<!-- <?php
-
-        echo 'TEST NEW INVOICES';
-
-        ?> -->

@@ -7,50 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../assets/style/form.css" />
     <link rel="stylesheet" type="text/css" href="../../assets/style/header.css" />
-    <title>New Companies</title>
+    <title>Document</title>
 </head>
 
 <body>
-
     <?php
 
     use app\controller\Controller;
 
-    $navbar = new Controller();
-
-    $navbar->view("template/header");
-
+    $header = new Controller;
+    $header->view('./template/header');
     ?>
-    <h1>Create new company</h1>
+    <form action="" method="post">
+        <!--Name of the company-->
+        <label for="NewCompanies">Company Name</label>
+        <input type="text" class="name" id="newcompany" name="newcompany" placeholder="Company">
 
-    <div class="container">
-        <form action="./NewCompanies.php" method="post">
+        <!--TVA Number-->
+        <label for="NewCompanies">TVA Number</label>
+        <input type="text" class="tva" id="tvanumber" name="tvanumber" placeholder="AA111 111 111">
 
-            <!--Name of the company-->
-            <label for="NewCompanies">Company Name</label>
-            <input type="text" class="name" id="newcompany" name="newcompany" placeholder="Company">
+        <!--Phone Number-->
+        <label for="NewCompanies">Phone Number</label>
+        <input type="tel" class="phone" id="phone" name="phone" placeholder="0123 45 67 89">
 
-            <!--TVA Number-->
-            <label for="NewCompanies">TVA Number</label>
-            <input type="text" class="tva" id="tvanumber" name="tvanumber" placeholder="123-456-789">
+        <!--Country -->
+        <label for="NewCompanies">Country</label>
+        <input type="text" class="country" id="country" name="country" placeholder="Country">
 
-            <!--Phone Number-->
-            <label for="NewCompanies">Phone Number</label>
-            <input type="tel" class="phone" id="phone" name="phone" placeholder="0123/456789" pattern="[0-9]{4}-[0-9]{6}" required>
+        <!--Company Type-->
+        <label for="company-type">Company Type</label>
+        <select id="companytype" name="companytype">
+            <option value="Client">Client</option>
+            <option value="Supplier">Supplier</option>
+        </select>
 
-            <!--Company Type-->
-            <label for="company-type">Company Type</label>
-            <select id="companytype" name="companytype">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-            </select>
-
-            <input type="submit" value="Submit" class="submit">
-
-        </form>
-    </div>
+        <input type="submit" value="Submit" class="submit">
+    </form>
 
 </body>
 
