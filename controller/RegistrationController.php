@@ -27,7 +27,7 @@ class RegistrationController extends Controller
 
             $newUser = new RegistrationModel();
             $newUser->addUser($usernameFilter, $nameFilter, $firstnameFilter, $mailFilter, $passwordFilterHash);
-
+            //header("Location : http://localhost:8000/login");
             return $this->view('login');
         } else {
             return $this->view('Registration');
