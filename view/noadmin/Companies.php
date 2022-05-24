@@ -34,20 +34,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <?php foreach ($array1 as $elem) {
-                            echo "<tr>";
-                            echo "<td>";
-                            echo $elem[0];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[1];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[2];
-                            echo "</td>";
-                            echo "<tr>";
-                        }; ?>
+                        <td><?php echo $elem[0]?></td>
+                        <td><?php echo $elem[1]?></td>
+                        <td><?php echo $elem[2]?></td>
+                    <?php }; ?>
                     </tr>
                 </tbody>
             </table>
@@ -68,20 +60,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach($array2 as $elem) {?>
                     <tr>
-                        <?php foreach ($array2 as $elem) {
-                            echo "<tr>";
-                            echo "<td>";
-                            echo $elem[0];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[1];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[2];
-                            echo "</td>";
-                            echo "<tr>";
-                        }; ?>
+                        <td><?php echo $elem[0]?></td>
+                        <td><?php echo $elem[1]?></td>
+                        <td><?php echo $elem[2]?></td>
+                    <?php }; ?>
                     </tr>
                 </tbody>
             </table>
