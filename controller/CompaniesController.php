@@ -49,4 +49,23 @@ class CompaniesController extends Controller
             return $this->view('admin/NewCompanies');
         }
     }
+
+    public function getCompaniesById($id)
+    {
+        $companies = new CompaniesModel();
+        $companiesDetails = $companies->getCompaniesDetail($id);
+        if ($companiesDetails == false) {
+            return $this->view('error');
+        } else {
+            return $this->view('noadmin/CompaniesDetails', $companiesDetails);
+        }
+    }
+
+    public function getCompaniesId()
+    {
+        $debug = new CompaniesModel();
+        $id = $debug->getCompaniesID();
+        return $id;
+    }
 }
+

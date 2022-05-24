@@ -9,7 +9,7 @@ class Database
     public function __construct()
     {
         try{
-            $this->pdo =  new PDO("mysql:host=localhost;dbname=COGIP;charset=utf8","root","root");
+          $this->pdo =  new PDO("mysql:host=localhost;dbname=COGIP;charset=utf8","user","user");
         }catch(\Exception $e)
         {
             echo 'Error: ' .$e->getMessage();
