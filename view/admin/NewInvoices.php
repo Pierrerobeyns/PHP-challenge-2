@@ -12,9 +12,7 @@
 
 <body>
     <?php
-
     use app\controller\Controller;
-
     $header = new Controller;
     $header->view('./template/header');
     ?>
