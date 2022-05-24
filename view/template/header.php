@@ -3,14 +3,14 @@
         <div class="nav-bar">
             <a href="" class="nav-item"><img src="../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
             <a href="" class="nav-item">Home</a>
-            <a href="/noadmin/Invoices" class="nav-item">Invoices</a>
-            <a href="/noadmin/Companies" class="nav-item">Companies</a>
-            <a href="/noadmin/Contact" class="nav-item">Contact</a>
+            <a href="/noadmin/invoices" class="nav-item">Invoices</a>
+            <a href="/noadmin/companies" class="nav-item">Companies</a>
+            <a href="/noadmin/contact" class="nav-item">Contact</a>
 
         </div>
         <div class="nav-button">
-            <a href="../view/Registration.php" class="sign-in">Sign in</a>
-            <a href="../view/login.php" class="sign-up">Sign up</a>
+            <a href="/registration" class="sign-in">Sign in</a>
+            <a href="/login" class="sign-up">Sign up</a>
         </div>
     </nav>
 </header>
