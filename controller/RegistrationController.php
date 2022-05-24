@@ -23,9 +23,10 @@ class RegistrationController extends Controller
             $firstnameFilter = htmlspecialchars($firstname);
             $mailFilter = filter_var($mail, FILTER_SANITIZE_EMAIL);
             $passwordFilter = htmlspecialchars($password);
+            $passwordFilterHash = password_hash($passwordFilter, PASSWORD_DEFAULT);
 
             $newUser = new RegistrationModel();
-            $newUser->addUser($usernameFilter, $nameFilter, $firstnameFilter, $mailFilter, $passwordFilter);
+            $newUser->addUser($usernameFilter, $nameFilter, $firstnameFilter, $mailFilter, $passwordFilterHash);
 
             return $this->view('login');
         } else {
