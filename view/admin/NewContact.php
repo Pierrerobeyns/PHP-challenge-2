@@ -13,7 +13,13 @@
 <body>
 
     <?php
-    require "../../view/template/header.php"
+
+    use app\controller\Controller;
+
+    $navbar = new Controller();
+
+    $navbar->view("template/header");
+
     ?>
 
 

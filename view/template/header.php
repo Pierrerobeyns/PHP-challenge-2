@@ -1,13 +1,6 @@
 <header>
     <nav>
         <div class="nav-bar">
-<<<<<<< HEAD
-            <a href="../view/HomePage.php" class="nav-item"><img src="../../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
-            <a href="../view/HomePage.php" class="nav-item">Home</a>
-            <a href="#" class="nav-item">Invoices</a>
-            <a href="#" class="nav-item">Companies</a>
-            <a href="#" class="nav-item">Contact</a>
-=======
             <a href="/" class="nav-item"><img src="../assets/img/logo_cogip.png" alt="logo COGIP" width="50px"></a>
             <a href="/" class="nav-item">Home</a>
             <a href="/noadmin/invoices" class="nav-item">Invoices</a>
@@ -15,7 +8,6 @@
             <a href="/noadmin/contact" class="nav-item">Contact</a>
             <a href="/welcome" class="nav-item">Dashboard</a>
 
->>>>>>> axel
         </div>
         <div class="nav-button">
             <a href="/registration" class="sign-in">Sign in</a>

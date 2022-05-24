@@ -13,9 +13,14 @@
 <body>
 
     <?php
-    require "../../view/template/header.php"
-    ?>
 
+    use app\controller\Controller;
+
+    $navbar = new Controller();
+
+    $navbar->view("template/header");
+
+    ?>
     <h1>Create new company</h1>
 
     <div class="container">
