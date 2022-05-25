@@ -1,18 +1,4 @@
-<?php
-session_start();
 
-//METTRE LES ELEMENTS HTML QUI CORRESPONDENT AUX COMPTES RESPECTIFS 
-if (!empty($_SESSION['GOD-MODE'])) {
-    echo "SALUT " . $_SESSION['GOD-MODE'];
-} else if (!empty($_SESSION['ADMIN-MODE'])) {
-
-    echo "Salut " . $_SESSION['ADMIN-MODE'];
-} else if (!empty($_SESSION['CUSTOMER'])) {
-    echo "Salut " . $_SESSION['CUSTOMER'];
-}
-
-"coucou";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +15,7 @@ if (!empty($_SESSION['GOD-MODE'])) {
     <?php
 
     use app\controller\Controller;
+    use app\model\WelcomeModel;
 
     $test = new Controller;
     $test->view('/template/header');
@@ -45,85 +32,98 @@ if (!empty($_SESSION['GOD-MODE'])) {
         <a href="/admin/newcontact"><img src="../assets/img/plus.svg" width="24px" />New Contact</a>
         <a href="/admin/newcompanies"><img src="../assets/img/plus.svg" width="24px" />New Company</a>
     </div>
-    <div class="table-pos">
-        <div class="table-style">
+    <h3>Last invoices :</h3>
 
-            <h3>Last invoices :</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice number</th>
+                <th>Dates</th>
+                <th>Company</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($array1 as $elem) {?>
+                <tr>
+                    <td><?php echo $elem['InvoicesNumber']?></td>
+                    <td><?php echo $elem['Date']?></td>
+                    <td><?php echo $elem['Company']?></td>
+                    <td><?php echo ($elem['id'])?></td>
+                    <td><a href="">
+                        <input type="checkbox" name="del">
+                        </a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Invoice number</th>
-                        <th>Dates</th>
-                        <th>Company</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($array1 as $elem) { ?>
-                        <tr>
-                            <td><?php echo $elem['InvoicesNumber'] ?></td>
-                            <td><?php echo $elem['Date'] ?></td>
-                            <td><?php echo $elem['Company'] ?></td>
-                            <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+    <h3>Last contacts :</h3>
 
-            <h3>Last contacts :</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Phone</th>
+                <th>Mail</th>
+                <th>Company</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($array2 as $elem) {?>
+                <tr>
+                    <td><?php echo $elem['Lastname']?></td>
+                    <td><?php echo $elem['Firstname']?></td>
+                    <td><?php echo $elem['Phone']?></td>
+                    <td><?php echo $elem['Email']?></td>
+                    <td><?php echo $elem['Company']?></td>
+                    <td><a href="">
+                        <?php 
+                        $test = new WelcomeModel();
+                        //$test->deleteContact($elem['id']);
+                        ?>
+                        <img src="../assets/img/trash.png" alt="delete info">
+                        </a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Lastname</th>
-                        <th>Firstname</th>
-                        <th>Phone</th>
-                        <th>Mail</th>
-                        <th>Company</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($array2 as $elem) { ?>
-                        <tr>
-                            <td><?php echo $elem['Lastname'] ?></td>
-                            <td><?php echo $elem['Firstname'] ?></td>
-                            <td><?php echo $elem['Phone'] ?></td>
-                            <td><?php echo $elem['Email'] ?></td>
-                            <td><?php echo $elem['Company'] ?></td>
-                            <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+    <h3>Last Companies :</h3>
 
-            <h3>Last Companies :</h3>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Company</th>
-                        <th>VAT number</th>
-                        <th>Country</th>
-                        <th>Type</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($array3 as $elem) { ?>
-                        <tr>
-                            <td><?php echo $elem['Company'] ?></td>
-                            <td><?php echo $elem['TVANumber'] ?></td>
-                            <td><?php echo $elem['Country'] ?></td>
-                            <td><?php echo $elem['TypeCompany'] ?></td>
-                            <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>VAT number</th>
+                <th>Country</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($array3 as $elem) {?>
+                <tr>
+                    <td><?php echo $elem['Company']?></td>
+                    <td><?php echo $elem['TVANumber']?></td>
+                    <td><?php echo $elem['Country']?></td>
+                    <td><?php echo $elem['TypeCompany']?></td>
+                    <td><a href="">
+                        <?php 
+                        $test = new WelcomeModel();
+                        //$test->deleteCompanies($elem['id']);
+                        ?>
+                        <img src="../assets/img/trash.png" alt="delete info">
+                        </a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 </body>
 
 </html>
