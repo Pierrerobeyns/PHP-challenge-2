@@ -17,6 +17,45 @@
 - Duration: **10 days**
 - Deadline: **27/05/2022 17:00**
 - Team challenge: **5**
+- The figma board is availaible [here](https://www.figma.com/file/YsWmPCHkGubRC8BEJ3sSmZ/COGIP)
+
+# Objectives
+
+Differents goals are carried out : 
+
+- Use of different URL parameters and filename
+- Use of sanitization to avoid SQL injections
+- Validation of data
+- Construction of a functional relational database
+- Use of correct joins in SQL
+- Use of aliases in your SQL request
+- Implementation of a CRUD to read, add, modify and delete data
+- Crypt password in a database
+- Use an MVC structure
+- Use a router
+- Setup a session
+- Allow access to certain page in regards to permissions
+
+# Get started 
+
+If you clone the repository and want to test the site, don't forget to adapt your password and username in the file `model>database.php` to connect to the database. 
+
+```php
+14    $this->pdo =  new \PDO("mysql:host=localhost;dbname=COGIP;charset=utf8", "USERNAME", "PASSWORD");
+```
+
+In addition, you must install the dependencies via the command 
+```
+composer install
+```
+
+# Differents acces mode 
+
+If you wish to access the administrator mode, please use the username `jean-christian-ranu` and the password `ranu` on the login page. 
+
+If you wish to access non-administrator mode, please use the username `muriel-perrache` and the password `perrache` on the login page. 
+
+If you wish to access the visitor mode, please use your username and password created on the registration page. 
 
 # Authors 
 
