@@ -37,6 +37,7 @@ class InvoicesModel
         company.company as companyName,
         type.type as companyType,
         people.lastname as lastName,
+        people.firstname as firstName,
         people.email as email, people.phone as phone 
         FROM invoice 
         INNER JOIN company ON invoice.id = company.id 
