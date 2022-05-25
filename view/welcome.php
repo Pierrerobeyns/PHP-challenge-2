@@ -1,18 +1,4 @@
-<?php
-session_start();
 
-//METTRE LES ELEMENTS HTML QUI CORRESPONDENT AUX COMPTES RESPECTIFS 
-if (!empty($_SESSION['GOD-MODE'])) {
-    echo "SALUT " . $_SESSION['GOD-MODE'];
-} else if (!empty($_SESSION['ADMIN-MODE'])) {
-
-    echo "Salut " . $_SESSION['ADMIN-MODE'];
-} else if (!empty($_SESSION['CUSTOMER'])) {
-    echo "Salut " . $_SESSION['CUSTOMER'];
-}
-
-"coucou";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +15,7 @@ if (!empty($_SESSION['GOD-MODE'])) {
     <?php
 
     use app\controller\Controller;
+    use app\model\WelcomeModel;
 
     $test = new Controller;
     $test->view('/template/header');
@@ -47,8 +34,6 @@ if (!empty($_SESSION['GOD-MODE'])) {
     </div>
 
 
-    <h1>Welcome</h1>
-
     <h3>Last invoices :</h3>
 
     <table>
@@ -66,7 +51,11 @@ if (!empty($_SESSION['GOD-MODE'])) {
                     <td><?php echo $elem['InvoicesNumber']?></td>
                     <td><?php echo $elem['Date']?></td>
                     <td><?php echo $elem['Company']?></td>
-                    <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
+                    <td><?php echo ($elem['id'])?></td>
+                    <td><a href="">
+                        <input type="checkbox" name="del">
+                        </a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>
@@ -93,7 +82,14 @@ if (!empty($_SESSION['GOD-MODE'])) {
                     <td><?php echo $elem['Phone']?></td>
                     <td><?php echo $elem['Email']?></td>
                     <td><?php echo $elem['Company']?></td>
-                    <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
+                    <td><a href="">
+                        <?php 
+                        $test = new WelcomeModel();
+                        //$test->deleteContact($elem['id']);
+                        ?>
+                        <img src="../assets/img/trash.png" alt="delete info">
+                        </a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>
@@ -118,7 +114,14 @@ if (!empty($_SESSION['GOD-MODE'])) {
                     <td><?php echo $elem['TVANumber']?></td>
                     <td><?php echo $elem['Country']?></td>
                     <td><?php echo $elem['TypeCompany']?></td>
-                    <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
+                    <td><a href="">
+                        <?php 
+                        $test = new WelcomeModel();
+                        //$test->deleteCompanies($elem['id']);
+                        ?>
+                        <img src="../assets/img/trash.png" alt="delete info">
+                        </a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>

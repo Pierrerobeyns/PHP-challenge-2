@@ -54,4 +54,31 @@ class WelcomeModel
         $result = $stmt->fetchAll();
         return $result;
     }
+
+    public function deleteInvoices($id)
+    {
+        $query = 
+            "DELETE FROM invoice
+            WHERE invoice.id = $id";
+        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt->execute();
+    }
+
+    public function deleteContact($id)
+    {
+        $query = 
+            "DELETE FROM people
+            WHERE people.id = $id";
+        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt->execute();
+    }
+
+    public function deleteCompanies($id)
+    {
+        $query = 
+            "DELETE FROM company
+            WHERE id = $id";
+        $stmt = $this->db->getInstance()->prepare($query);
+        $stmt->execute();
+    }
 }
