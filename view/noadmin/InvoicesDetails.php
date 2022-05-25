@@ -1,7 +1,3 @@
-<?php
-
-// Utiliser $array['invoice'], $array['companyVat'], $array['companyName'], $array['companyType'], $array['lastName'], $array['email'], $array['phone'] pour afficher les données  
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
