@@ -68,27 +68,19 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Lastname</th>
-                            <th>Firstname</th>
-                            <th>Phone</th>
-                            <th>Mail</th>
+                            <th>Invoice number</th>
+                            <th>Dates</th>
                             <th>Company</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($array2 as $elem) { ?>
+                        <?php foreach ($array1 as $elem) { ?>
                             <tr>
-                                <td><?php echo $elem['Lastname'] ?></td>
-                                <td><?php echo $elem['Firstname'] ?></td>
-                                <td><?php echo $elem['Phone'] ?></td>
-                                <td><?php echo $elem['Email'] ?></td>
+                                <td><?php echo $elem['InvoicesNumber'] ?></td>
+                                <td><?php echo $elem['Date'] ?></td>
                                 <td><?php echo $elem['Company'] ?></td>
                                 <td><a href="">
-                                        <?php
-                                        $test = new WelcomeModel();
-                                        //$test->deleteContact($elem['id']);
-                                        ?>
                                         <img src="../assets/img/trash.png" alt="delete info">
                                     </a>
                                 </td>
@@ -97,42 +89,41 @@
                     </tbody>
                 </table>
             </div>
+                <h3>Last Companies :</h3>
+                <div class="table-pos">
 
-            <h3>Last Companies :</h3>
-            <div class="table-pos">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Company</th>
-                            <th>VAT number</th>
-                            <th>Country</th>
-                            <th>Type</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($array3 as $elem) { ?>
+                    <table>
+                        <thead>
                             <tr>
-                                <td><?php echo $elem['Company'] ?></td>
-                                <td><?php echo $elem['TVANumber'] ?></td>
-                                <td><?php echo $elem['Country'] ?></td>
-                                <td><?php echo $elem['TypeCompany'] ?></td>
-                                <td><a href="">
-                                        <?php
-                                        $test = new WelcomeModel();
-                                        //$test->deleteCompanies($elem['id']);
-                                        ?>
-                                        <img src="../assets/img/trash.png" alt="delete info">
-                                    </a>
-                                </td>
+                                <th>Company</th>
+                                <th>VAT number</th>
+                                <th>Country</th>
+                                <th>Type</th>
+                                <th></th>
                             </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($array3 as $elem) { ?>
+                                <tr>
+                                    <td><?php echo $elem['Company'] ?></td>
+                                    <td><?php echo $elem['TVANumber'] ?></td>
+                                    <td><?php echo $elem['Country'] ?></td>
+                                    <td><?php echo $elem['TypeCompany'] ?></td>
+                                    <td><a href="">
+                                            <?php
+                                            $test = new WelcomeModel();
+                                            //$test->deleteCompanies($elem['id']);
+                                            ?>
+                                            <img src="../assets/img/trash.png" alt="delete info">
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

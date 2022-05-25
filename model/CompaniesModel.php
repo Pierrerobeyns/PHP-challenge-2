@@ -43,7 +43,7 @@ class CompaniesModel
     {
         $query = 
         "INSERT INTO company(company, country, vatnumber, phonecompany, typecompany)
-        VALUES ('$company', '$country', '$vatnumber', '$phonecompany', '$typecompany')"; #TODO
+        VALUES ('$company', '$country', '$vatnumber', '$phonecompany', '$typecompany')";
         $stmt = $this->db->getInstance()->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
