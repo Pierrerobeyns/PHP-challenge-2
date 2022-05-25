@@ -21,6 +21,9 @@ body {
 
 
         .welcome-title {
+            background-color: rgba($color: #fff, $alpha: 0.4);
+            border-radius: 5px;
+            padding: 15px 50px;
             font-size: 42px;
         }
 
@@ -55,6 +58,41 @@ body {
             &:hover {
                 background-color: $redcolor;
                 color: white;
+            }
+        }
+    }
+
+    .table-pos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+
+        .table-style {
+            table {
+                border-collapse: collapse;
+
+                thead {
+                    th {
+                        font-size: 1.5em;
+                        border-bottom: #293132 1px solid;
+                        padding: 1em;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            border-bottom: 1px solid #293132;
+                            padding: 1.5em 2em;
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 2rem;
             }
         }
     }

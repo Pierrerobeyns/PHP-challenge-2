@@ -4,6 +4,15 @@ $blackcolor: #293132;
 $greycolor: #CDCDCD;
 $greycolor2: #EEE5E5;
 
+@function set-color($color) {
+    @if (background-color($redcolor)) {
+      @return #fff;
+    }
+    @else {
+      @return $redcolor;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 body {
@@ -57,6 +66,14 @@ body {
                                 border-bottom: 1px solid #293132;
                                 padding: 1.5em 2em;
                                 font-size: 1.3em;
+                                a{
+                                    text-decoration: none;
+                                    color: $blackcolor;
+                                    transition: all 0.2s;
+                                    &:hover{
+                                        color: #fff;
+                                    }
+                                } 
                             }
                         }
                     }
