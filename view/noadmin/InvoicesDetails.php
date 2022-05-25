@@ -34,19 +34,17 @@
 </table>
 
 
-<h3>IContact person : </h3>
+<h3>Contact person : </h3>
 
 <table>
     <thead>
-        <th>Lastname</th>
-        <th>Firstname</th>
+        <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
     </thead>
     <tbody>
         <tr>
-            <td><?php echo $array1['lastName']?></td>
-            <td><?php echo $array1['firstName']?></td>
+            <td><?php echo $array1['firstName'] . " " . $array1['lastName']?></td>
             <td><?php echo $array1['email']?></td>
             <td><?php echo $array1['phone']?></td>
         </tr>

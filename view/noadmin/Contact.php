@@ -27,8 +27,7 @@ use app\controller\Controller;
             <table>
                 <thead>
                     <tr>
-                        <th>Lastname</th>
-                        <th>Firstname</th>
+                        <th>Name</th>
                         <th>Phone</th>
                         <th>Mail</th>
                         <th>Company</th>
@@ -37,8 +36,7 @@ use app\controller\Controller;
                 <tbody>
                 <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <td><a href="contact/<?php echo $elem['id']?>"><?php echo $elem['Lastname']?></a></td>
-                        <td><?php echo $elem['Firstname']?></td>
+                        <td><a href="contact/<?php echo $elem['id']?>"><?php echo $elem['Firstname'] . " " . $elem['Lastname']?></a></td>
                         <td><?php echo $elem['Phone']?></td>
                         <td><?php echo $elem['Email']?></td>
                         <td><?php echo $elem['Company']?></td>

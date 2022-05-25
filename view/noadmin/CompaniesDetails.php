@@ -23,15 +23,13 @@
 <h3>Contact persons : </h3>
 <table>
     <thead>
-        <th>Firstname</th>
-        <th>Lastname</th>
+        <th>Name</th>
         <th>Phone</th>
         <th>Email</th>
     </thead>
     <tbody>
         <tr>
-            <td><?php echo $array1['firstName']?></td>
-            <td><?php echo $array1['lastName']?></td>
+            <td><?php echo $array1['firstName'] . " " . $array1['lastName']?></td>
             <td><?php echo $array1['phone']?></td>
             <td><?php echo $array1['email']?></td>
         </tr>

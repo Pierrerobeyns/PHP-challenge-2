@@ -15,9 +15,9 @@
     $header->view('./template/header');
 ?>
 
-<h2>Contact : <?php echo $array1['firstName'] . $array1['lastName']?></h2>
+<h2>Contact : <?php echo $array1['firstName'] . " " . $array1['lastName']?></h2>
 
-<p>Contact : <?php echo $array1['firstName'] . $array1['lastName']?></p>
+<p>Contact : <?php echo $array1['firstName'] . " " . $array1['lastName']?></p>
 <p>Company : <?php echo $array1['company']?></p>
 <p>Email : <?php echo $array1['email']?></p>
 <p>Phone : <?php echo $array1['phone']?></p>
