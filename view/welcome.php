@@ -57,24 +57,18 @@ if (!empty($_SESSION['GOD-MODE'])) {
                 <th>Invoice number</th>
                 <th>Dates</th>
                 <th>Company</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <?php foreach ($array1 as $elem) {
-                    echo "<tr>";
-                    echo "<td>";
-                    echo $elem[0];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[1];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[2];
-                    echo "</td>";
-                    echo "<tr>";
-                }; ?>
-            </tr>
+            <?php foreach ($array1 as $elem) {?>
+                <tr>
+                    <td><?php echo $elem['InvoicesNumber']?></td>
+                    <td><?php echo $elem['Date']?></td>
+                    <td><?php echo $elem['Company']?></td>
+                    <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 
@@ -88,30 +82,20 @@ if (!empty($_SESSION['GOD-MODE'])) {
                 <th>Phone</th>
                 <th>Mail</th>
                 <th>Company</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <?php foreach ($array2 as $elem) {
-                    echo "<tr>";
-                    echo "<td>";
-                    echo $elem[0];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[1];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[2];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[3];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[4];
-                    echo "</td>";
-                    echo "<tr>";
-                }; ?>
-            </tr>
+            <?php foreach ($array2 as $elem) {?>
+                <tr>
+                    <td><?php echo $elem['Lastname']?></td>
+                    <td><?php echo $elem['Firstname']?></td>
+                    <td><?php echo $elem['Phone']?></td>
+                    <td><?php echo $elem['Email']?></td>
+                    <td><?php echo $elem['Company']?></td>
+                    <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 
@@ -124,27 +108,19 @@ if (!empty($_SESSION['GOD-MODE'])) {
                 <th>VAT number</th>
                 <th>Country</th>
                 <th>Type</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <?php foreach ($array3 as $elem) {
-                    echo "<tr>";
-                    echo "<td>";
-                    echo $elem[0];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[1];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[2];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $elem[3];
-                    echo "</td>";
-                    echo "<tr>";
-                }; ?>
-            </tr>
+            <?php foreach ($array3 as $elem) {?>
+                <tr>
+                    <td><?php echo $elem['Company']?></td>
+                    <td><?php echo $elem['TVANumber']?></td>
+                    <td><?php echo $elem['Country']?></td>
+                    <td><?php echo $elem['TypeCompany']?></td>
+                    <td><img src="../assets/img/trash.png" alt="delete info" height="15px"></td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 </body>

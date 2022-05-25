@@ -5,4 +5,6 @@
 echo '<pre>';
 var_dump($array1);
 echo '</pre>';
-echo 'TEST COMPANIES DETAILS';
+echo 'TEST COMPANIES DETAILS';?>
+
+<span>Nom de la compa :<span> <?php echo $array1['company'];?>
