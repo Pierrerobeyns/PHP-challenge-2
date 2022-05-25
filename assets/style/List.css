@@ -62,4 +62,15 @@ body .table-pos .table-styl table tbody tr td {
   padding: 1.5em 2em;
   font-size: 1.3em;
 }
+
+body .table-pos .table-styl table tbody tr td a {
+  text-decoration: none;
+  color: #293132;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body .table-pos .table-styl table tbody tr td a:hover {
+  color: #fff;
+}
 /*# sourceMappingURL=List.css.map */
