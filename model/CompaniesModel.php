@@ -55,6 +55,7 @@ class CompaniesModel
         company.vatnumber as TVA,
         type.type as type,
         people.firstname as firstName,
+        people.phone as phone,
         people.lastname as lastName,
         people.email as email,
         invoice.numberinvoice as invoiceNumber,
