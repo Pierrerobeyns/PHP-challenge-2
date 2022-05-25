@@ -31,7 +31,7 @@ class InvoicesController extends Controller
     public function newInvoice()
     {
         $check = new CheckingData();
-        $bool = $check->checkingData($_POST['invoices'], $_POST['date'], $_POST['nameCompanies'], $_POST['nameContact']);
+        $bool = $check->checkingData(!empty($_POST['invoices']), !empty($_POST['date']), !empty($_POST['nameCompanies']), !empty($_POST['nameContact']));
         $getIdCompanies = new CompaniesController();
         $idCompagnies = $getIdCompanies->getCompaniesId();
         $getUsers = new ContactModel();

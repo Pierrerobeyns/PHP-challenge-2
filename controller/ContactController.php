@@ -31,7 +31,7 @@ class ContactController extends Controller
     public function newContact()
     {
         $check = new CheckingData();
-        $bool = $check->checkingData($_POST['name'], $_POST['firstname'], $_POST['phone'], $_POST['email'], $_POST['nameCompanies']);
+        $bool = $check->checkingData(!empty($_POST['name']), !empty($_POST['firstname']), !empty($_POST['phone']), !empty($_POST['email']), !empty($_POST['nameCompanies']));
 
         $getIdCompanies = new CompaniesController();
         $idCompagnies = $getIdCompanies->getCompaniesId();
