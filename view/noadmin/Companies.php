@@ -34,20 +34,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <?php foreach ($array1 as $elem) {
-                            echo "<tr>";
-                            echo "<td>";
-                            echo $elem[0];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[1];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[2];
-                            echo "</td>";
-                            echo "<tr>";
-                        }; ?>
+                        <td><a href="companies/<?php echo $elem['id']?>"><?php echo $elem['CompanyName']?></td></a>
+                        <td><?php echo $elem['TVANumber']?></td>
+                        <td><?php echo $elem['Country']?></td>
+                    <?php }; ?>
                     </tr>
                 </tbody>
             </table>
@@ -68,20 +60,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach($array2 as $elem) {?>
                     <tr>
-                        <?php foreach ($array2 as $elem) {
-                            echo "<tr>";
-                            echo "<td>";
-                            echo $elem[0];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[1];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[2];
-                            echo "</td>";
-                            echo "<tr>";
-                        }; ?>
+                        <td><a href="companies/<?php echo $elem['id']?>"><?php echo $elem['CompanyName']?></a></td>
+                        <td><?php echo $elem['TVANumber']?></td>
+                        <td><?php echo $elem['Country']?></td>
+                    <?php }; ?>
                     </tr>
                 </tbody>
             </table>

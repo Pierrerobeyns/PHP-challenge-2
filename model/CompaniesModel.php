@@ -18,7 +18,7 @@ class CompaniesModel
     public function readAllCompaniesClients()
     {
         $query = 
-            "SELECT DISTINCT company as CompanyName, vatnumber as TVANumber, country as Country
+            "SELECT DISTINCT company as CompanyName, vatnumber as TVANumber, country as Country, id
             FROM company 
             WHERE typecompany = 'Client'";
         $stmt = $this->db->getInstance()->prepare($query);
@@ -30,7 +30,7 @@ class CompaniesModel
     public function readAllCompaniesSuppliers()
     {
         $query = 
-            "SELECT DISTINCT company as CompanyName, vatnumber as TVANumber, country as Country
+            "SELECT DISTINCT company as CompanyName, vatnumber as TVANumber, country as Country, id
             FROM company 
             WHERE typecompany = 'Supplier'";
         $stmt = $this->db->getInstance()->prepare($query);

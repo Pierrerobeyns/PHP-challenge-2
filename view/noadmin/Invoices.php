@@ -33,23 +33,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <?php foreach ($array1 as $elem) {
-                            echo "<tr>";
-                            echo "<td>";
-                            echo $elem[0];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[1];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[2];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[3];
-                            echo "</td>";
-                            echo "<tr>";
-                        }; ?>
+                        <td><a href= "invoices/<?php echo $elem['id'];?> "><?php echo $elem['InvoiceNumber']?></a></td>
+                        <td><?php echo $elem['Date']?></td>
+                        <td><?php echo $elem['Company']?></td>
+                        <td><?php echo $elem['Type']?></td>
+                    <?php }; ?>
                     </tr>
                 </tbody>
             </table>

@@ -28,33 +28,21 @@ use app\controller\Controller;
                 <thead>
                     <tr>
                         <th>Lastname</th>
-                        <th>Firstanme</th>
+                        <th>Firstname</th>
                         <th>Phone</th>
                         <th>Mail</th>
                         <th>Company</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <?php foreach ($array1 as $elem) {
-                            echo "<tr>";
-                            echo "<td>";
-                            echo $elem[0];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[1];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[2];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[3];
-                            echo "</td>";
-                            echo "<td>";
-                            echo $elem[4];
-                            echo "</td>";
-                            echo "<tr>";
-                        }; ?>
+                        <td><a href="contact/<?php echo $elem['id']?>"><?php echo $elem['Lastname']?></a></td>
+                        <td><?php echo $elem['Firstname']?></td>
+                        <td><?php echo $elem['Phone']?></td>
+                        <td><?php echo $elem['Email']?></td>
+                        <td><?php echo $elem['Company']?></td>
+                    <?php }; ?>
                     </tr>
                 </tbody>
             </table>

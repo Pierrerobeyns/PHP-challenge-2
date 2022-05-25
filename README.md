@@ -15,7 +15,7 @@
 
 - Type of challenge: **consolidation**
 - Duration: **10 days**
-- Deadline: **26/05/2022 17:00**
+- Deadline: **27/05/2022 17:00**
 - Team challenge: **5**
 
 # Authors 
