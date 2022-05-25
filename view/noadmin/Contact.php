@@ -37,11 +37,11 @@ use app\controller\Controller;
                 <tbody>
                 <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <td><?php echo $elem[0]?></td>
-                        <td><?php echo $elem[1]?></td>
-                        <td><?php echo $elem[2]?></td>
-                        <td><?php echo $elem[3]?></td>
-                        <td><?php echo $elem[4]?></td>
+                        <td><a href="contact/<?php echo $elem['id']?>"><?php echo $elem['Lastname']?></a></td>
+                        <td><?php echo $elem['Firstname']?></td>
+                        <td><?php echo $elem['Phone']?></td>
+                        <td><?php echo $elem['Email']?></td>
+                        <td><?php echo $elem['Company']?></td>
                     <?php }; ?>
                     </tr>
                 </tbody>
