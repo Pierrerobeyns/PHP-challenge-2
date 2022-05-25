@@ -24,11 +24,15 @@
     <h1>Create new company</h1>
 
     <div class="container">
-        <form action="./NewCompanies.php" method="post">
+        <form action="" method="post">
 
             <!--Name of the company-->
             <label for="NewCompanies">Company Name</label>
             <input type="text" class="name" id="newcompany" name="newcompany" placeholder="Company">
+
+            <!--Country of the company-->
+            <label for="NewCompanies">Country</label>
+            <input type="text" class="country" id="country" name="country" placeholder="Country">
 
             <!--TVA Number-->
             <label for="NewCompanies">TVA Number</label>
@@ -36,15 +40,13 @@
 
             <!--Phone Number-->
             <label for="NewCompanies">Phone Number</label>
-            <input type="tel" class="phone" id="phone" name="phone" placeholder="0123/456789" pattern="[0-9]{4}-[0-9]{6}" required>
+            <input type="tel" class="phone" id="phone" name="phone" placeholder="0123/456789" required>
 
             <!--Company Type-->
             <label for="company-type">Company Type</label>
             <select id="companytype" name="companytype">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
+                <option value="Client">Client</option>
+                <option value="Supplier">Supplier</option>
             </select>
 
             <input type="submit" value="Submit" class="submit">

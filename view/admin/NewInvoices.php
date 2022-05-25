@@ -25,7 +25,7 @@
     <div class="container">
         <h1>Create new invoices</h1>
 
-        <form action="./NewInvoices.php" method="post">
+        <form action="" method="post">
 
             <!--Invoices Number-->
             <label for="NewInvoices">Invoice Number</label>
@@ -37,11 +37,19 @@
 
             <!--Name of the company-->
             <label for="NewInvoices">Company</label>
-            <input type="text" id="company" name="company" placeholder="Company">
+            <select name="nameCompanies">
+                <?php foreach ($array1 as $company) {?>
+                    <option value="<?php echo $company['id'] ?>"><?php echo $company['company'] ?></option>
+                <?php } ?>
+        </select>
 
             <!--Name of the contact-->
             <label for="NewInvoices">Contact person regarding the invoice</label>
-            <input type="text" id="contact" name="contact" placeholder="John Smith">
+            <select name="nameContact">
+                <?php foreach ($array2 as $contact) { ?>
+                    <option value="<?php echo $contact['id'] ?>"><?php echo $contact['lastname'] . " " . $contact['firstname'] ?></option>
+                <?php } ?>
+        </select>
 
             <input type="submit" value="Submit" class="submit">
 

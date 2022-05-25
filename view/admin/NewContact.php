@@ -26,7 +26,7 @@
     <h1>Create new contact</h1>
 
     <div class="container">
-        <form action="./newcontact" method="post">
+        <form action="" method="post">
 
             <!--Name-->
             <label for="NewContact">Name</label>
@@ -38,7 +38,7 @@
 
             <!--Phone Number-->
             <label for="NewContact">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="0123/456789" pattern="[0-9]{4}/[0-9]{6}" required>
+            <input type="tel" id="phone" name="phone" placeholder="0123/456789" required>
 
             <!--Email-->
             <label for="email">E-mail</label>
@@ -46,7 +46,11 @@
 
             <!--Name of the company-->
             <label for="NewContact">Company</label>
-            <input type="text" id="company" name="company" placeholder="Company">
+            <select name="nameCompanies">
+                <?php foreach ($array1 as $company) { ?>
+                    <option value="<?php echo $company['id'] ?>"><?php echo $company['company'] ?></option>
+                <?php }?>
+        </select>
 
 
             <input type="submit" value="Submit" class="submit">

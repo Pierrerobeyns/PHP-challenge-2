@@ -51,9 +51,8 @@
                     <td><?php echo $elem['InvoicesNumber']?></td>
                     <td><?php echo $elem['Date']?></td>
                     <td><?php echo $elem['Company']?></td>
-                    <td><?php echo ($elem['id'])?></td>
                     <td><a href="">
-                        <input type="checkbox" name="del">
+                    <img src="../assets/img/trash.png" alt="delete info">
                         </a>
                     </td>
                 </tr>
