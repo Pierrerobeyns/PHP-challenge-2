@@ -17,7 +17,7 @@ class InvoicesModel
     public function readAllInvoices()
     {
         $query = 
-            "SELECT DISTINCT numberinvoice as InvoiceNumber, date as Date , company as Company, type as Type
+            "SELECT DISTINCT numberinvoice as InvoiceNumber, date as Date , company as Company, type as Type, invoice.id
             FROM invoice
             INNER JOIN company 
                 on invoice.id_company = company.id 

@@ -35,7 +35,7 @@
                 <tbody>
                 <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <td><?php echo $elem['InvoiceNumber']?></td>
+                        <td><a href= "invoices/<?php echo $elem['id'];?> "><?php echo $elem['InvoiceNumber']?></a></td>
                         <td><?php echo $elem['Date']?></td>
                         <td><?php echo $elem['Company']?></td>
                         <td><?php echo $elem['Type']?></td>
