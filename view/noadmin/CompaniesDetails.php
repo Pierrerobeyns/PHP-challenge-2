@@ -23,7 +23,7 @@
 <h3>Contact persons : </h3>
 <table>
     <thead>
-        <th>Name</th>
+        <th>Name</th>       
         <th>Phone</th>
         <th>Email</th>
     </thead>
