@@ -36,9 +36,9 @@
                 <tbody>
                     <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <td><?php echo $elem[0]?></td>
-                        <td><?php echo $elem[1]?></td>
-                        <td><?php echo $elem[2]?></td>
+                        <td><a href="companies/<?php echo $elem['id']?>"><?php echo $elem['CompanyName']?></td></a>
+                        <td><?php echo $elem['TVANumber']?></td>
+                        <td><?php echo $elem['Country']?></td>
                     <?php }; ?>
                     </tr>
                 </tbody>
@@ -62,9 +62,9 @@
                 <tbody>
                 <?php foreach($array2 as $elem) {?>
                     <tr>
-                        <td><?php echo $elem[0]?></td>
-                        <td><?php echo $elem[1]?></td>
-                        <td><?php echo $elem[2]?></td>
+                        <td><a href="companies/<?php echo $elem['id']?>"><?php echo $elem['CompanyName']?></a></td>
+                        <td><?php echo $elem['TVANumber']?></td>
+                        <td><?php echo $elem['Country']?></td>
                     <?php }; ?>
                     </tr>
                 </tbody>

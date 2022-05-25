@@ -35,10 +35,10 @@
                 <tbody>
                 <?php foreach($array1 as $elem) {?>
                     <tr>
-                        <td><?php echo $elem[0]?></td>
-                        <td><?php echo $elem[1]?></td>
-                        <td><?php echo $elem[2]?></td>
-                        <td><?php echo $elem[3]?></td>
+                        <td><?php echo $elem['InvoiceNumber']?></td>
+                        <td><?php echo $elem['Date']?></td>
+                        <td><?php echo $elem['Company']?></td>
+                        <td><?php echo $elem['Type']?></td>
                     <?php }; ?>
                     </tr>
                 </tbody>
