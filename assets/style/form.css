@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+body {
+  background: #EEE5E5;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url("../img/wave.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+body h1 {
+  color: #A31621;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+body .container {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+body .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  border: solid 1px #293132;
+  border-radius: 10px;
+  background-color: #293132;
+  width: 500px;
+  margin: auto;
+  line-height: 50px;
+  font-family: "Quicksand", sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  -webkit-box-shadow: 4px 4px 30px #293132;
+          box-shadow: 4px 4px 30px #293132;
+}
+
+body .container form input {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 40px;
+  width: 400px;
+  padding-left: 20px;
+}
+
+body .container form select {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 40px;
+  width: 420px;
+  padding-left: 20px;
+}
+
+body .container form .submit {
+  width: 100px;
+  height: 30px;
+  background-color: #A31621;
+  border: solid 1px #A31621;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-left: 3px;
+}
+
+body .container form .submit:hover {
+  cursor: pointer;
+  background-color: #293132;
+  color: #A31621;
+  border: 1px solid #A31621;
+}
+/*# sourceMappingURL=form.css.map */

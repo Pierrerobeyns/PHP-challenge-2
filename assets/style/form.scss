@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+//Variables
+$font: 'Quicksand', sans-serif;
+$redcolor: #A31621;
+$blackcolor: #293132;
+$greycolor: #CDCDCD;
+$greycolor2: #EEE5E5;
+
+
+//New Companies
+body{
+
+    background: $greycolor2;
+    height: 100vh;
+    margin: 0 auto;
+    //overflow-x: hidden;
+    //overflow-y: hidden;
+    background-image: url('../img/wave.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: contain;
+
+    h1{
+        color: $redcolor;
+        font-family: $font;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .container{
+        text-align:center;
+        color: white;
+        margin-bottom: 40px;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            border: solid 1px $blackcolor;
+            border-radius: 10px;
+            background-color: $blackcolor;
+            width: 500px;
+            margin: auto;
+            line-height:50px;
+            font-family: $font;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            padding-top: 10px;
+            box-shadow: 4px 4px 30px $blackcolor;
+
+            input{
+                text-decoration: none;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 40px;
+                width: 400px;
+                padding-left: 20px;
+            }
+
+            select{
+                text-decoration: none;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 40px;
+                width: 420px;
+                padding-left: 20px;
+            }
+
+            .submit{
+                width: 100px;
+                height: 30px;
+                background-color: $redcolor;
+                border: solid 1px $redcolor;
+                color: white;
+                border-radius: 10px;
+                margin-top: 20px;
+                transition:all 0.3s;
+                padding-left: 3px;
+            }
+
+            .submit:hover{
+                cursor: pointer;
+                background-color: $blackcolor;
+                color: $redcolor;
+                border: 1px solid $redcolor;
+            }
+        }
+    }
+}

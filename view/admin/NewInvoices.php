@@ -5,54 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../assets/style/form.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/style/header.css" />
     <title>New Invoices</title>
 </head>
 
 <body>
 
-    <h1>Create new invoices</h1>
+    <?php
 
-    <form action="" method="post">
+    use app\controller\Controller;
 
-        <!--Invoices Number-->
-        <label for="NewInvoices">Invoice Number</label>
-        <input type="text" id="invoice" name="invoices" placeholder="123-456-789">
+    $navbar = new Controller();
 
-        <!--Date-->
-        <label for="NewInvoices">Invoice Date</label>
-        <input type="date" id="date" name="date" placeholder="01-01-2000" min="2020-01-01" max="2030-12-31">
+    $navbar->view("template/header");
 
-        <!--Name of the company-->
-        <label for="compagnies">Compagnies:</label>
-        <select name="nameCompanies">
-            <?php foreach ($array1 as $company) {
-            ?>
-                <option value="<?php echo $company['id'] ?>"><?php echo $company['company'] ?></option>
-            <?php
-            }
-            ?>
-        </select>
+    ?>
 
-        <!--Name of the contact-->
-        <label for="contact">Contact:</label>
-        <select name="nameContact">
-            <?php foreach ($array2 as $contact) {
-            ?>
-                <option value="<?php echo $contact['id'] ?>"><?php echo $contact['lastname'] . " " . $contact['firstname'] ?></option>
-            <?php
-            }
-            ?>
-        </select>
+    <div class="container">
+        <h1>Create new invoices</h1>
 
+        <form action="./NewInvoices.php" method="post">
 
-        <input type="submit" value="Submit">
+            <!--Invoices Number-->
+            <label for="NewInvoices">Invoice Number</label>
+            <input type="text" id="invoice" name="invoices" placeholder="123-456-789">
 
-    </form>
+            <!--Date-->
+            <label for="NewInvoices">Invoice Date</label>
+            <input type="date" id="date" name="date" placeholder="01-01-2000" min="2020-01-01" max="2030-12-31">
+
+            <!--Name of the company-->
+            <label for="NewInvoices">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company">
+
+            <!--Name of the contact-->
+            <label for="NewInvoices">Contact person regarding the invoice</label>
+            <input type="text" id="contact" name="contact" placeholder="John Smith">
+
+            <input type="submit" value="Submit" class="submit">
+
+        </form>
+    </div>
 
 </body>
 
 </html>
+
+<!-- <?php
+
+        echo 'TEST NEW INVOICES';
+
+        ?> -->
