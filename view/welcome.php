@@ -39,106 +39,107 @@
         <a href="/admin/newcontact"><img src="../assets/img/plus.svg" width="24px" />New Contact</a>
         <a href="/admin/newcompanies"><img src="../assets/img/plus.svg" width="24px" />New Company</a>
     </div>
+    
     <div class="table-pos">
         <div class="table-style">
             <h3>Last invoices :</h3>
             <div class="table-pos">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Invoice number</th>
-                            <th>Dates</th>
-                            <th>Company</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($array1 as $elem) { ?>
+                <form action="welcome" method="post">
+                    <table>
+                        <thead>
                             <tr>
-                                <td><?php echo $elem['InvoicesNumber'] ?></td>
-                                <td><?php echo $elem['Date'] ?></td>
-                                <td><?php echo $elem['Company'] ?></td>
-                                <td><a href="">
-                                        <?php
-                                        $test = new WelcomeModel();
-                                        //$test->deleteInvoice($elem['id']); ?>
-                                        <img src="../assets/img/trash.png" alt="delete info">
-                                    </a>
-                                </td>
+                                <th>Invoice number</th>
+                                <th>Dates</th>
+                                <th>Company</th>
+                                <th><img src="../assets/img/trash.png" alt="delete info"></th>
                             </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($array1 as $elem) { ?>
+                                <tr>
+                                    <td><?php echo $elem['InvoicesNumber'] ?></td>
+                                    <td><?php echo $elem['Date'] ?></td>
+                                    <td><?php echo $elem['Company'] ?></td>
+                                    <td>
+                                        <input type="checkbox" name="del[]" value=<?php echo $elem['id'];?> 
+                                        <?php $test = new WelcomeModel();
+                                        $test ->deleteInvoices();?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <input type="submit" value="Delete an invoice"> 
+                        </tbody>
+                        
+                        </form>
+                    </table>
             </div>
+        
 
             <h3>Last contacts :</h3>
             <div class="table-pos">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lastname</th>
-                            <th>Firstname</th>
-                            <th>Phone</th>
-                            <th>Mail</th>
-                            <th>Company</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($array2 as $elem) { ?>
+                <form action="welcome" method="post">
+                    <table>
+                        <thead>
                             <tr>
-                                <td><?php echo $elem['Lastname'] ?></td>
-                                <td><?php echo $elem['Firstname'] ?></td>
-                                <td><?php echo $elem['Phone'] ?></td>
-                                <td><?php echo $elem['Email'] ?></td>
-                                <td><?php echo $elem['Company'] ?></td>
-                                <td><a href="">
-                                        <?php
-                                        $test = new WelcomeModel();
-                                        //$test->deleteContact($elem['id']);
-                                        ?>
-                                        <img src="../assets/img/trash.png" alt="delete info">
-                                    </a>
-                                </td>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Mail</th>
+                                <th>Company</th>
+                                <th><img src="../assets/img/trash.png" alt="delete info"></th>
                             </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($array2 as $elem) { ?>
+                                <tr>
+                                    <td><?php echo $elem['Lastname'] . " " . $elem['Firstname'] ?></td>
+                                    <td><?php echo $elem['Phone'] ?></td>
+                                    <td><?php echo $elem['Email'] ?></td>
+                                    <td><?php echo $elem['Company'] ?></td>
+                                    <td>
+                                        <input type="checkbox" name="del[]" value=<?php echo $elem['id'];?> 
+                                        <?php $test = new WelcomeModel();
+                                        $test ->deleteContact();?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <input type="submit" value="Delete a contact"> 
+                        </tbody>
+                    </table>
+                </form>
             </div>
 
             <h3>Last Companies :</h3>
             <div class="table-pos">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Company</th>
-                            <th>VAT number</th>
-                            <th>Country</th>
-                            <th>Type</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($array3 as $elem) { ?>
+                <form action="welcome" method="post">
+                    <table>
+                        <thead>
                             <tr>
-                                <td><?php echo $elem['Company'] ?></td>
-                                <td><?php echo $elem['TVANumber'] ?></td>
-                                <td><?php echo $elem['Country'] ?></td>
-                                <td><?php echo $elem['TypeCompany'] ?></td>
-                                <td><a href="">
-                                        <?php
-                                        $test = new WelcomeModel();
-                                        //$test->deleteCompanies($elem['id']);
-                                        ?>
-                                        <img src="../assets/img/trash.png" alt="delete info">
-                                    </a>
-                                </td>
+                                <th>Company</th>
+                                <th>VAT number</th>
+                                <th>Country</th>
+                                <th>Type</th>
+                                <th><img src="../assets/img/trash.png" alt="delete info"></th>
                             </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($array3 as $elem) { ?>
+                                <tr>
+                                    <td><?php echo $elem['Company'] ?></td>
+                                    <td><?php echo $elem['TVANumber'] ?></td>
+                                    <td><?php echo $elem['Country'] ?></td>
+                                    <td><?php echo $elem['TypeCompany'] ?></td>
+                                    <td>
+                                        <input type="checkbox" name="del[]" value=<?php echo $elem['id'];?> 
+                                        <?php $test = new WelcomeModel();
+                                        $test ->deleteCompanies();?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <input type="submit" value="Delete a company">
+                        </tbody>
+                    </table>
+                </form>
+                
             </div>
         </div>
     </div>
