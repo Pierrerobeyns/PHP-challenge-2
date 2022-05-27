@@ -11,7 +11,13 @@ body {
     margin: 0 auto;
     font-family: $font;
     background-color: $greycolor2;
-
+    background: {   
+        image: url('../img/wave.svg');
+        repeat: no-repeat;
+        position: bottom;
+        attachment: fixed;
+        size: contain;
+    }
     .p-container {
         display: flex;
         flex-direction: column;
@@ -69,30 +75,53 @@ body {
         margin-top: 2em;
 
         .table-style {
-            table {
-                border-collapse: collapse;
-
-                thead {
-                    th {
-                        font-size: 1.5em;
-                        border-bottom: #293132 1px solid;
-                        padding: 1em;
-                    }
-                }
-
-                tbody {
-                    tr {
-                        td {
-                            border-bottom: 1px solid #293132;
-                            padding: 1.5em 2em;
-                            font-size: 1.3em;
+            form {
+                .sub-pos{
+                    display: flex;
+                    justify-content: center;
+                    margin: 2em 0;
+                    .sub {
+                        padding: 15px;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $redcolor;
+                        color: #fff ;
+                        font-size: 0.9em;
+                        letter-spacing: 2px;
+                        transition: all 0.2s;
+                        &:hover{
+                            background-color: #691219;
                         }
                     }
                 }
-            }
+                
+                table {
+                    border-collapse: collapse;
 
+                    thead {
+                        th {
+                            font-size: 1.5em;
+                            border-bottom: #293132 1px solid;
+                            padding: 1em;
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                border-bottom: 1px solid #293132;
+                                padding: 1.5em 2em;
+                                font-size: 1.3em;
+                            }
+                        }
+
+                    }
+                }
+
+            }
             h3 {
                 font-size: 2rem;
+                color: $redcolor;
             }
         }
     }

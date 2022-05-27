@@ -3,6 +3,11 @@ body {
   margin: 0 auto;
   font-family: "Quicksand", sans-serif;
   background-color: #EEE5E5;
+  background-image: url("../img/wave.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 body .p-container {
@@ -87,17 +92,43 @@ body .table-pos {
   margin-top: 2em;
 }
 
-body .table-pos .table-style table {
+body .table-pos .table-style form .sub-pos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em 0;
+}
+
+body .table-pos .table-style form .sub-pos .sub {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #A31621;
+  color: #fff;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body .table-pos .table-style form .sub-pos .sub:hover {
+  background-color: #691219;
+}
+
+body .table-pos .table-style form table {
   border-collapse: collapse;
 }
 
-body .table-pos .table-style table thead th {
+body .table-pos .table-style form table thead th {
   font-size: 1.5em;
   border-bottom: #293132 1px solid;
   padding: 1em;
 }
 
-body .table-pos .table-style table tbody tr td {
+body .table-pos .table-style form table tbody tr td {
   border-bottom: 1px solid #293132;
   padding: 1.5em 2em;
   font-size: 1.3em;
@@ -105,5 +136,6 @@ body .table-pos .table-style table tbody tr td {
 
 body .table-pos .table-style h3 {
   font-size: 2rem;
+  color: #A31621;
 }
 /*# sourceMappingURL=welcome.css.map */
