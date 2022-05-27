@@ -9,9 +9,21 @@
             <a href="/welcome" class="nav-item">Dashboard</a>
 
         </div>
-        <div class="nav-button">
-            <a href="/registration" class="sign-in">Sign in</a>
-            <a href="/login" class="sign-up">Sign up</a>
-        </div>
+
+        <?php
+        if(empty($_SESSION)){
+            echo <<<HTML
+            <div class="nav-button">
+                <a href="/registration" class="sign-in">Sign in</a>
+                <a href="/login" class="sign-up">Sign up</a>
+            </div>
+            HTML;
+        } else {
+            echo <<<HTML
+            <div class="nav-button">
+                <a href="/welcome" class="sign-in">Log out</a>
+            </div>
+            HTML;
+        }?>
     </nav>
 </header>

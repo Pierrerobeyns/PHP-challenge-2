@@ -22,7 +22,15 @@
     <div class="p-container">
         <p class="welcome-title">Welcome to the COGIP</p>
         <div class="text-container">
-            <p>Hello Boss</p>
+        <?php
+            if (!empty($_SESSION['GOD-MODE'])) {
+                echo "<p> Hello " . $_SESSION['GOD-MODE'] . "</p>";
+            } else if (!empty($_SESSION['ADMIN-MODE'])) {
+                echo "<p> Hello " . $_SESSION['ADMIN-MODE'] . "</p>";
+            } else if (!empty($_SESSION['CUSTOMER'])) {
+                echo "<p> Hello " . $_SESSION['CUSTOMER'] . "</p>";
+            } ?>
+
             <p>What would you do today ? </p>
         </div>
     </div>
@@ -42,7 +50,6 @@
                             <th>Dates</th>
                             <th>Company</th>
                             <th></th>
-                            <th>Select</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,9 +58,11 @@
                                 <td><?php echo $elem['InvoicesNumber'] ?></td>
                                 <td><?php echo $elem['Date'] ?></td>
                                 <td><?php echo $elem['Company'] ?></td>
-                                <td><?php echo ($elem['id']) ?></td>
                                 <td><a href="">
-                                        <input type="checkbox" name="del">
+                                        <?php
+                                        $test = new WelcomeModel();
+                                        //$test->deleteInvoice($elem['id']); ?>
+                                        <img src="../assets/img/trash.png" alt="delete info">
                                     </a>
                                 </td>
                             </tr>
