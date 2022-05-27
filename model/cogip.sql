@@ -2,10 +2,10 @@
 -- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le : mar. 24 mai 2022 à 08:45
--- Version du serveur : 5.7.24
--- Version de PHP : 8.1.0
+-- Host: localhost:3306
+-- Generation Time: May 27, 2022 at 01:05 PM
+-- Server version: 5.7.24
+-- PHP Version: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `cogip`
+-- Database: `cogip`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `company`
+-- Table structure for table `company`
 --
 
 CREATE TABLE `company` (
@@ -37,7 +37,7 @@ CREATE TABLE `company` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `company`
+-- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`id`, `company`, `country`, `vatnumber`, `phonecompany`, `typecompany`) VALUES
@@ -60,7 +60,7 @@ INSERT INTO `company` (`id`, `company`, `country`, `vatnumber`, `phonecompany`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `invoice`
+-- Table structure for table `invoice`
 --
 
 CREATE TABLE `invoice` (
@@ -72,7 +72,7 @@ CREATE TABLE `invoice` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `invoice`
+-- Dumping data for table `invoice`
 --
 
 INSERT INTO `invoice` (`id`, `numberinvoice`, `date`, `id_people`, `id_company`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `invoice` (`id`, `numberinvoice`, `date`, `id_people`, `id_company`)
 -- --------------------------------------------------------
 
 --
--- Structure de la table `people`
+-- Table structure for table `people`
 --
 
 CREATE TABLE `people` (
@@ -107,7 +107,7 @@ CREATE TABLE `people` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `people`
+-- Dumping data for table `people`
 --
 
 INSERT INTO `people` (`id`, `firstname`, `lastname`, `phone`, `email`, `id_company`) VALUES
@@ -129,7 +129,7 @@ INSERT INTO `people` (`id`, `firstname`, `lastname`, `phone`, `email`, `id_compa
 -- --------------------------------------------------------
 
 --
--- Structure de la table `type`
+-- Table structure for table `type`
 --
 
 CREATE TABLE `type` (
@@ -139,7 +139,7 @@ CREATE TABLE `type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `type`
+-- Dumping data for table `type`
 --
 
 INSERT INTO `type` (`id`, `type`, `id_company`) VALUES
@@ -164,7 +164,7 @@ INSERT INTO `type` (`id`, `type`, `id_company`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -176,7 +176,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`username`, `lastname`, `firstname`, `mail`, `password`) VALUES
@@ -188,18 +188,18 @@ INSERT INTO `users` (`username`, `lastname`, `firstname`, `mail`, `password`) VA
 ('test', 'test', 'test', 'test233', '$2y$10$8egGRy3Q4qAo5HCJFzkXOu9.1ouCxSzvN/TlyYrtZ2YuDuorPnKhy');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `company`
+-- Indexes for table `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id`),
   ADD KEY `typecompany` (`typecompany`);
 
 --
--- Index pour la table `invoice`
+-- Indexes for table `invoice`
 --
 ALTER TABLE `invoice`
   ADD PRIMARY KEY (`id`),
@@ -207,75 +207,75 @@ ALTER TABLE `invoice`
   ADD KEY `id_company` (`id_company`);
 
 --
--- Index pour la table `people`
+-- Indexes for table `people`
 --
 ALTER TABLE `people`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_company` (`id_company`);
 
 --
--- Index pour la table `type`
+-- Indexes for table `type`
 --
 ALTER TABLE `type`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_company` (`id_company`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD UNIQUE KEY `mail` (`mail`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `company`
+-- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT pour la table `invoice`
+-- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT pour la table `people`
+-- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT pour la table `type`
+-- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `invoice`
+-- Constraints for table `invoice`
 --
 ALTER TABLE `invoice`
-  ADD CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`id_company`) REFERENCES `company` (`id`),
-  ADD CONSTRAINT `invoice_ibfk_3` FOREIGN KEY (`id_people`) REFERENCES `people` (`id`);
+  ADD CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`id_company`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `invoice_ibfk_3` FOREIGN KEY (`id_people`) REFERENCES `people` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `people`
+-- Constraints for table `people`
 --
 ALTER TABLE `people`
-  ADD CONSTRAINT `people_ibfk_1` FOREIGN KEY (`id_company`) REFERENCES `company` (`id`);
+  ADD CONSTRAINT `people_ibfk_1` FOREIGN KEY (`id_company`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `type`
+-- Constraints for table `type`
 --
 ALTER TABLE `type`
-  ADD CONSTRAINT `type_ibfk_1` FOREIGN KEY (`id_company`) REFERENCES `company` (`id`);
+  ADD CONSTRAINT `type_ibfk_1` FOREIGN KEY (`id_company`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

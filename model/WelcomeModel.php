@@ -55,30 +55,39 @@ class WelcomeModel
         return $result;
     }
 
-    public function deleteInvoices($id)
+    public function deleteInvoices()
     {
-        $query = 
-            "DELETE FROM invoice
-            WHERE invoice.id = $id";
-        $stmt = $this->db->getInstance()->prepare($query);
-        $stmt->execute();
+        if(isset($_POST['del'])) {
+            foreach($_POST['del'] as $value) {
+                $deleteRes = $this->db->getInstance()->prepare("DELETE FROM invoice WHERE id = :id");
+                $deleteRes -> execute([
+                    'id' => $value,
+                ]);
+            }
+        }
     }
 
-    public function deleteContact($id)
+    public function deleteContact()
     {
-        $query = 
-            "DELETE FROM people
-            WHERE people.id = $id";
-        $stmt = $this->db->getInstance()->prepare($query);
-        $stmt->execute();
+        if(isset($_POST['del'])) {
+            foreach($_POST['del'] as $value) {
+                $deleteRes = $this->db->getInstance()->prepare("DELETE FROM contact WHERE people.id = :id");
+                $deleteRes -> execute([
+                    'id' => $value,
+                ]);
+            }
+        }
     }
 
-    public function deleteCompanies($id)
+    public function deleteCompanies()
     {
-        $query = 
-            "DELETE FROM company
-            WHERE id = $id";
-        $stmt = $this->db->getInstance()->prepare($query);
-        $stmt->execute();
+        if(isset($_POST['del'])) {
+            foreach($_POST['del'] as $value) {
+                $deleteRes = $this->db->getInstance()->prepare("DELETE FROM company WHERE company.id = :id");
+                $deleteRes -> execute([
+                    'id' => $value,
+                ]);
+            }
+        }
     }
 }
